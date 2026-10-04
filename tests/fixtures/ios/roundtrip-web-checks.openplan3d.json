@@ -1,0 +1,598 @@
+{
+  "defaults" : {
+    "ceilingHeight" : 2.3999999999999999,
+    "exteriorWallThickness" : 0.20000000000000001,
+    "interiorWallThickness" : 0.12
+  },
+  "doors" : [
+    {
+      "category" : {
+        "door" : {
+
+        }
+      },
+      "dimensions" : [
+        0.85999999999999999,
+        2.0499999999999998,
+        0.12
+      ],
+      "hingeLeft" : true,
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000008",
+      "opensInward" : true,
+      "parentIdentifier" : "0B0E0B00-0000-4000-8000-000000000005",
+      "story" : 0,
+      "style" : "single",
+      "transform" : [
+        -1,
+        0,
+        1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        0.56040000000000001,
+        1.0249999999999999,
+        3.46,
+        1
+      ]
+    }
+  ],
+  "floors" : [
+
+  ],
+  "objects" : [
+    {
+      "attributes" : {
+        "openkitchen3dRole" : "proposed",
+        "sku" : "B2D-600"
+      },
+      "category" : {
+        "base_cabinet" : {
+
+        }
+      },
+      "dimensions" : [
+        0.59999999999999998,
+        0.87,
+        0.57999999999999996
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000009",
+      "story" : 0,
+      "transform" : [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0,
+        0,
+        1,
+        0,
+        2.1000000000000001,
+        0.435,
+        0.28999999999999998,
+        1
+      ]
+    },
+    {
+      "attributes" : {
+        "openkitchen3dRole" : "proposed",
+        "sku" : "T2D-600"
+      },
+      "category" : {
+        "tall_cabinet" : {
+
+        }
+      },
+      "dimensions" : [
+        0.59999999999999998,
+        2.1699999999999999,
+        0.57999999999999996
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-00000000000A",
+      "story" : 0,
+      "transform" : [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0,
+        0,
+        1,
+        0,
+        2.3999999999999999,
+        1.085,
+        0.28999999999999998,
+        1
+      ]
+    },
+    {
+      "attributes" : {
+        "openkitchen3dRole" : "proposed",
+        "sku" : "B1D-600"
+      },
+      "category" : {
+        "base_cabinet" : {
+
+        }
+      },
+      "dimensions" : [
+        0.59999999999999998,
+        0.87,
+        0.57999999999999996
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-00000000000B",
+      "story" : 0,
+      "transform" : [
+        -1,
+        0,
+        1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        0.56040000000000012,
+        0.435,
+        3.1099999999999999,
+        1
+      ]
+    },
+    {
+      "attributes" : {
+        "openkitchen3dRole" : "proposed",
+        "sku" : "ISL-1800"
+      },
+      "category" : {
+        "island" : {
+
+        }
+      },
+      "dimensions" : [
+        1.8,
+        0.87,
+        0.90000000000000002
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-00000000000C",
+      "story" : 0,
+      "transform" : [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0,
+        0,
+        1,
+        0,
+        2.1000000000000001,
+        0.435,
+        1.73,
+        1
+      ]
+    },
+    {
+      "attributes" : {
+        "openkitchen3dRole" : "proposed",
+        "sku" : "W1D-600"
+      },
+      "category" : {
+        "wall_cabinet" : {
+
+        }
+      },
+      "dimensions" : [
+        0.59999999999999998,
+        0.71999999999999997,
+        0.33000000000000002
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-00000000000D",
+      "story" : 0,
+      "transform" : [
+        -1,
+        0,
+        1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        2.3599999999999999,
+        1.8100000000000001,
+        3.2349999999999999,
+        1
+      ]
+    }
+  ],
+  "openings" : [
+
+  ],
+  "openkitchen3d" : {
+    "cabinets" : [
+      {
+        "depth" : 0.57999999999999996,
+        "elevation" : 0,
+        "family" : "base",
+        "finishId" : "white-matte",
+        "height" : 0.87,
+        "id" : "0B0E0B00-0000-4000-8000-000000000009",
+        "productId" : "base-2d",
+        "sku" : "B2D-600",
+        "wallId" : "0B0E0B00-0000-4000-8000-000000000001",
+        "width" : 0.59999999999999998
+      },
+      {
+        "depth" : 0.57999999999999996,
+        "elevation" : 0,
+        "family" : "tall",
+        "finishId" : "white-matte",
+        "height" : 2.1699999999999999,
+        "id" : "0B0E0B00-0000-4000-8000-00000000000A",
+        "productId" : "tall-pantry",
+        "sku" : "T2D-600",
+        "wallId" : "0B0E0B00-0000-4000-8000-000000000001",
+        "width" : 0.59999999999999998
+      },
+      {
+        "depth" : 0.57999999999999996,
+        "elevation" : 0,
+        "family" : "base",
+        "finishId" : "white-matte",
+        "height" : 0.87,
+        "id" : "0B0E0B00-0000-4000-8000-00000000000B",
+        "productId" : "base-1d",
+        "sku" : "B1D-600",
+        "wallId" : "0B0E0B00-0000-4000-8000-000000000005",
+        "width" : 0.59999999999999998
+      },
+      {
+        "depth" : 0.90000000000000002,
+        "elevation" : 0,
+        "family" : "island",
+        "finishId" : "white-matte",
+        "height" : 0.87,
+        "id" : "0B0E0B00-0000-4000-8000-00000000000C",
+        "productId" : "island",
+        "sku" : "ISL-1800",
+        "width" : 1.8
+      },
+      {
+        "depth" : 0.33000000000000002,
+        "elevation" : 1.45,
+        "family" : "wall",
+        "finishId" : "white-matte",
+        "height" : 0.71999999999999997,
+        "id" : "0B0E0B00-0000-4000-8000-00000000000D",
+        "productId" : "wall-1d",
+        "sku" : "W1D-600",
+        "wallId" : "0B0E0B00-0000-4000-8000-000000000005",
+        "width" : 0.59999999999999998
+      }
+    ],
+    "captureSource" : "web",
+    "catalogVersion" : "generic-starter@0.1",
+    "createdAt" : "2026-10-04T00:00:00Z",
+    "name" : "Web checks",
+    "producer" : "ios",
+    "projectId" : "0B0E0000-0000-4000-8000-00000000000B",
+    "roomplanAdapterVersion" : 1,
+    "schema" : "openkitchen3d\/ios-project@0.1",
+    "units" : "m",
+    "updatedAt" : "2026-10-04T00:00:00Z",
+    "verification" : {
+      "ceilingHeight" : false,
+      "walls" : {
+        "0B0E0B00-0000-4000-8000-000000000001" : false,
+        "0B0E0B00-0000-4000-8000-000000000002" : false,
+        "0B0E0B00-0000-4000-8000-000000000003" : false,
+        "0B0E0B00-0000-4000-8000-000000000004" : false,
+        "0B0E0B00-0000-4000-8000-000000000005" : false,
+        "0B0E0B00-0000-4000-8000-000000000006" : false
+      }
+    },
+    "web" : {
+      "cabinets" : {
+        "0B0E0B00-0000-4000-8000-00000000000B" : {
+          "configuration" : {
+            "hinge" : "left"
+          }
+        },
+        "0B0E0B00-0000-4000-8000-00000000000D" : {
+          "configuration" : {
+            "hinge" : "left"
+          }
+        }
+      },
+      "catalogId" : "starter",
+      "countertop" : {
+        "overhang" : 20,
+        "thickness" : 40
+      },
+      "currency" : "USD",
+      "style" : {
+        "carcass" : "white",
+        "countertop" : "quartz-white",
+        "front" : "white-matte",
+        "handle" : "bar-steel"
+      },
+      "units" : "metric"
+    }
+  },
+  "openplanHandoffVersion" : 1,
+  "openplanPrepared" : true,
+  "planNotes" : "Created with OpenKitchen3D for iOS. Scan geometry is a starting point — field-verify before ordering.",
+  "sections" : [
+    {
+      "ceilingHeight" : 2.3999999999999999,
+      "center" : [
+        2.3199999999999994,
+        0,
+        1.8866666666666667
+      ],
+      "displayName" : "Web checks",
+      "label" : "kitchen",
+      "story" : 0
+    }
+  ],
+  "stories" : [
+    {
+      "index" : 0,
+      "name" : "Ground Floor"
+    }
+  ],
+  "version" : 2,
+  "walls" : [
+    {
+      "category" : {
+        "wall" : {
+
+        }
+      },
+      "dimensions" : [
+        4.3200000000000003,
+        2.3999999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000001",
+      "story" : 0,
+      "transform" : [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0,
+        0,
+        1,
+        0,
+        2.1000000000000001,
+        1.2,
+        -0.059999999999999998,
+        1
+      ]
+    },
+    {
+      "category" : {
+        "wall" : {
+
+        }
+      },
+      "dimensions" : [
+        2.3199999999999994,
+        2.3999999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000002",
+      "story" : 0,
+      "transform" : [
+        6.123233995736766e-17,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        6.123233995736766e-17,
+        0,
+        4.2599999999999998,
+        1.2,
+        1.0999999999999999,
+        1
+      ]
+    },
+    {
+      "category" : {
+        "wall" : {
+
+        }
+      },
+      "dimensions" : [
+        1.5,
+        2.3999999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000003",
+      "story" : 0,
+      "transform" : [
+        -1,
+        0,
+        1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        3.5099999999999998,
+        1.2,
+        2.2599999999999998,
+        1
+      ]
+    },
+    {
+      "category" : {
+        "wall" : {
+
+        }
+      },
+      "dimensions" : [
+        1.2000000000000002,
+        2.3999999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000004",
+      "story" : 0,
+      "transform" : [
+        6.123233995736766e-17,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0,
+        6.123233995736766e-17,
+        0,
+        2.7599999999999998,
+        1.2,
+        2.8599999999999999,
+        1
+      ]
+    },
+    {
+      "category" : {
+        "wall" : {
+
+        }
+      },
+      "dimensions" : [
+        2.8199999999999994,
+        2.3999999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000005",
+      "story" : 0,
+      "transform" : [
+        -1,
+        0,
+        1.2246467991473532e-16,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1.2246467991473532e-16,
+        0,
+        -1,
+        0,
+        1.3500000000000001,
+        1.2,
+        3.46,
+        1
+      ]
+    },
+    {
+      "category" : {
+        "wall" : {
+
+        }
+      },
+      "dimensions" : [
+        3.52,
+        2.3999999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000006",
+      "story" : 0,
+      "transform" : [
+        6.123233995736766e-17,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        6.123233995736766e-17,
+        0,
+        -0.059999999999999998,
+        1.2,
+        1.7,
+        1
+      ]
+    }
+  ],
+  "windows" : [
+    {
+      "category" : {
+        "window" : {
+
+        }
+      },
+      "dimensions" : [
+        1.2,
+        1.1499999999999999,
+        0.12
+      ],
+      "identifier" : "0B0E0B00-0000-4000-8000-000000000007",
+      "parentIdentifier" : "0B0E0B00-0000-4000-8000-000000000001",
+      "sillHeight" : 1.05,
+      "story" : 0,
+      "style" : "fixed",
+      "transform" : [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0,
+        0,
+        1,
+        0,
+        2.1000000000000001,
+        1.625,
+        -0.059999999999999998,
+        1
+      ]
+    }
+  ]
+}

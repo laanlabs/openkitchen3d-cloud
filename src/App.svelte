@@ -3,6 +3,7 @@
   import Home from './lib/ui/Home.svelte';
   import EditorView from './lib/ui/EditorView.svelte';
   import PrintView from './lib/ui/PrintView.svelte';
+  import ImportView from './lib/ui/ImportView.svelte';
   import type { Project } from './lib/model/types';
   import { loadProject } from './lib/io/storage';
   import { decodeShared } from './lib/io/share';
@@ -11,6 +12,7 @@
     | { name: 'home' }
     | { name: 'editor' | 'print'; project: Project }
     | { name: 'view'; project: Project }
+    | { name: 'import'; version: string; payload: string }
     | { name: 'loading' }
     | { name: 'missing'; message: string };
 
@@ -24,6 +26,8 @@
     if (head === 'p' || head === 'print') {
       const project = await loadProject(arg);
       route = project ? { name: head === 'p' ? 'editor' : 'print', project } : { name: 'missing', message: 'This kitchen is not in this browser. Projects are stored locally — open it on the device where you made it, or import its JSON file.' };
+    } else if (head === 'import' && rest.length >= 2) {
+      route = { name: 'import', version: rest[0], payload: rest.slice(1).join('/') };
     } else if (head === 'view') {
       const project = decodeShared(arg);
       route = project ? { name: 'view', project } : { name: 'missing', message: 'This share link is incomplete or damaged.' };
@@ -48,6 +52,8 @@
     <EditorView project={route.project} />
   {:else if route.name === 'view'}
     <EditorView project={route.project} readonly />
+  {:else if route.name === 'import'}
+    <ImportView version={route.version} payload={route.payload} />
   {:else if route.name === 'print'}
     <PrintView project={route.project} />
   {:else if route.name === 'missing'}

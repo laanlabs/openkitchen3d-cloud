@@ -28,6 +28,17 @@ Hosted on Firebase Hosting (project `openkitchen3d`, site `openkitchen3d-cloud`)
   OpenPlan3D prepared-RoomPlan JSON (`docs/EXPORT_FORMAT.md` contract), project JSON, PNG, GLB,
   and a share link that carries the whole design in the URL fragment (nothing uploaded).
 
+## Working with the iOS app
+
+[openkitchen3d-ios](../openkitchen3d-ios) and this planner exchange the same OpenPlan3D JSON, with the
+`openkitchen3d` kitchen block (`openkitchen3d-ios/docs/EXPORT_FORMAT.md`).
+
+- **iOS → web:** the app's Export › *Open in OpenKitchen3D web* opens `/#/import/v1/<payload>`, which asks to open, replace or keep both.
+- **Web → iOS:** Export › *Open in the iOS app* gives an `openkitchen3d://import/v1/<payload>` link, or a JSON file to AirDrop.
+- **Payload:** raw-DEFLATE + base64url JSON (`src/lib/io/transfer.ts`), so no server is involved.
+- **Round trips:** web-only data (catalog, style, worktop settings, per-unit options, NA/EU SKUs) rides in `openkitchen3d.web`, which iOS keeps verbatim.
+- **Parity:** `tests/interop.test.ts` checks that iOS fixtures (`tests/fixtures/ios`) give the same cabinets and design checks here as on iOS. It also writes this side's fixtures for the iOS tests. To regenerate and check both sides, run `../openkitchen3d-ios/scripts/verify-web-interop.sh`.
+
 ## Develop
 
 ```sh

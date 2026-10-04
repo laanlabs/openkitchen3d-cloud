@@ -1,0 +1,407 @@
+{
+ "schema": "openkitchen3d/web-project@0.1",
+ "id": "0B0E0000-0000-4000-8000-00000000000A",
+ "name": "Web NA U-kitchen",
+ "createdAt": "2026-10-04T00:00:00.000Z",
+ "updatedAt": "2026-10-04T00:00:00.000Z",
+ "catalogId": "na",
+ "units": "imperial",
+ "captureSource": "web",
+ "ceilingHeight": 2400,
+ "ceilingVerified": false,
+ "walls": [
+  {
+   "id": "0B0E0A00-0000-4000-8000-000000000001",
+   "start": {
+    "x": -60,
+    "y": -60
+   },
+   "end": {
+    "x": 4260,
+    "y": -60
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": true
+  },
+  {
+   "id": "0B0E0A00-0000-4000-8000-000000000002",
+   "start": {
+    "x": 4260,
+    "y": -60
+   },
+   "end": {
+    "x": 4260,
+    "y": 3460
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  },
+  {
+   "id": "0B0E0A00-0000-4000-8000-000000000003",
+   "start": {
+    "x": 4260,
+    "y": 3460
+   },
+   "end": {
+    "x": -60,
+    "y": 3460
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": true
+  },
+  {
+   "id": "0B0E0A00-0000-4000-8000-000000000004",
+   "start": {
+    "x": -60,
+    "y": 3460
+   },
+   "end": {
+    "x": -60,
+    "y": -60
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  }
+ ],
+ "openings": [
+  {
+   "id": "0B0E0A00-0000-4000-8000-000000000005",
+   "wallId": "0B0E0A00-0000-4000-8000-000000000001",
+   "kind": "window",
+   "position": 0.5,
+   "width": 1200,
+   "height": 1150,
+   "sillHeight": 1050,
+   "hingeLeft": true
+  },
+  {
+   "id": "0B0E0A00-0000-4000-8000-000000000006",
+   "wallId": "0B0E0A00-0000-4000-8000-000000000003",
+   "kind": "door",
+   "position": 0.78,
+   "width": 860,
+   "height": 2050,
+   "sillHeight": 0,
+   "hingeLeft": true
+  }
+ ],
+ "fixtures": [],
+ "kitchen": {
+  "catalogVersion": "openkitchen3d-na@1",
+  "cabinets": [
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000007",
+    "productId": "generic-na-base-sb-876-610",
+    "sku": "SB30",
+    "family": "base",
+    "anchor": {
+     "x": 2100,
+     "y": 305,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 762,
+    "height": 876,
+    "depth": 610,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000008",
+    "productId": "generic-appliances-na-dishwasher-dishwasher-built-in",
+    "sku": "DW24",
+    "family": "appliance",
+    "anchor": {
+     "x": 2786,
+     "y": 305,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 610,
+    "height": 876,
+    "depth": 610,
+    "configuration": {
+     "hinge": "right"
+    },
+    "finishIds": {
+     "handle": "bar-black"
+    },
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000009",
+    "productId": "generic-na-base-b-876-610",
+    "sku": "B48",
+    "family": "base",
+    "anchor": {
+     "x": 609.5,
+     "y": 305,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 1219,
+    "height": 876,
+    "depth": 610,
+    "configuration": {},
+    "finishIds": {
+     "front": "navy"
+    },
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-00000000000A",
+    "productId": "generic-na-base-b-876-610",
+    "sku": "B42",
+    "family": "base",
+    "anchor": {
+     "x": 3624.5,
+     "y": 305,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 1067,
+    "height": 876,
+    "depth": 610,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-00000000000B",
+    "productId": "generic-na-base-b-876-610",
+    "sku": "B18",
+    "family": "base",
+    "anchor": {
+     "x": 1447.5,
+     "y": 305,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 457,
+    "height": 876,
+    "depth": 610,
+    "configuration": {
+     "hinge": "left"
+    },
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-00000000000C",
+    "productId": "generic-na-base-b-876-610",
+    "sku": "B30",
+    "family": "base",
+    "anchor": {
+     "x": 305,
+     "y": 1038,
+     "elevation": 0
+    },
+    "rotation": 270,
+    "width": 762,
+    "height": 876,
+    "depth": 610,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000004"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-00000000000D",
+    "productId": "generic-appliances-na-range-freestanding/slide-in-range",
+    "sku": "RNG30",
+    "family": "appliance",
+    "anchor": {
+     "x": 3870,
+     "y": 1700,
+     "elevation": 0
+    },
+    "rotation": 90,
+    "width": 762,
+    "height": 914,
+    "depth": 660,
+    "configuration": {},
+    "finishIds": {
+     "front": "stainless"
+    },
+    "wallId": "0B0E0A00-0000-4000-8000-000000000002"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-00000000000E",
+    "productId": "generic-na-base-b-876-610",
+    "sku": "B48",
+    "family": "base",
+    "anchor": {
+     "x": 3895,
+     "y": 2690.5,
+     "elevation": 0
+    },
+    "rotation": 90,
+    "width": 1219,
+    "height": 876,
+    "depth": 610,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000002"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-00000000000F",
+    "productId": "generic-na-base-b-876-610",
+    "sku": "B27",
+    "family": "base",
+    "anchor": {
+     "x": 3895,
+     "y": 976,
+     "elevation": 0
+    },
+    "rotation": 90,
+    "width": 686,
+    "height": 876,
+    "depth": 610,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000002"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000010",
+    "productId": "generic-na-wall-w-762-305",
+    "sku": "W3630",
+    "family": "wall",
+    "anchor": {
+     "x": 609.5,
+     "y": 152.5,
+     "elevation": 1372
+    },
+    "rotation": 0,
+    "width": 914,
+    "height": 762,
+    "depth": 305,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000011",
+    "productId": "generic-na-wall-w-762-305",
+    "sku": "W3630",
+    "family": "wall",
+    "anchor": {
+     "x": 3624.5,
+     "y": 152.5,
+     "elevation": 1372
+    },
+    "rotation": 0,
+    "width": 914,
+    "height": 762,
+    "depth": 305,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000012",
+    "productId": "generic-na-wall-w-762-305",
+    "sku": "W3630",
+    "family": "wall",
+    "anchor": {
+     "x": 152.5,
+     "y": 2028.5,
+     "elevation": 1372
+    },
+    "rotation": 270,
+    "width": 914,
+    "height": 762,
+    "depth": 305,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000004"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000013",
+    "productId": "generic-na-wall-w-762-305",
+    "sku": "W3030",
+    "family": "wall",
+    "anchor": {
+     "x": 152.5,
+     "y": 1038,
+     "elevation": 1372
+    },
+    "rotation": 270,
+    "width": 762,
+    "height": 762,
+    "depth": 305,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000004"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000014",
+    "productId": "generic-na-wall-w-762-305",
+    "sku": "W2730",
+    "family": "wall",
+    "anchor": {
+     "x": 4047.5,
+     "y": 976,
+     "elevation": 1372
+    },
+    "rotation": 90,
+    "width": 686,
+    "height": 762,
+    "depth": 305,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000002"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000015",
+    "productId": "generic-appliances-na-range-hood-range-hood",
+    "sku": "HD30",
+    "family": "wall",
+    "anchor": {
+     "x": 3946,
+     "y": 1700,
+     "elevation": 1600
+    },
+    "rotation": 90,
+    "width": 762,
+    "height": 457,
+    "depth": 508,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000002"
+   },
+   {
+    "id": "0B0E0A00-0000-4000-8000-000000000016",
+    "productId": "generic-na-wall-w-762-305",
+    "sku": "W3630",
+    "family": "wall",
+    "anchor": {
+     "x": 4047.5,
+     "y": 2690.5,
+     "elevation": 1372
+    },
+    "rotation": 90,
+    "width": 914,
+    "height": 762,
+    "depth": 305,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0A00-0000-4000-8000-000000000002"
+   }
+  ],
+  "style": {
+   "front": "sage",
+   "carcass": "white",
+   "handle": "knob-brass",
+   "countertop": "butcher-block"
+  },
+  "countertop": {
+   "thickness": 30,
+   "overhang": 25
+  },
+  "currency": "USD"
+ }
+}

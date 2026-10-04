@@ -1,0 +1,80 @@
+{
+  "cabinets" : [
+    {
+      "elevation" : 0,
+      "id" : "2D72AC9F-9195-46C1-995B-ADB21CD6EB88",
+      "productId" : "app-dw",
+      "sku" : "APP-DW-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "33F71250-D2CF-4A82-A7D2-CC5C272C4877",
+      "productId" : "base-sink",
+      "sku" : "SB-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "3B5F275B-013B-4E76-9DED-D113DD7997C6",
+      "productId" : "base-3dr",
+      "sku" : "B3DR-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 1550,
+      "id" : "413769DB-B94A-4DE9-B5CB-F03049182613",
+      "productId" : "wall-hood",
+      "sku" : "APP-HD-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "70BA089B-71C6-427D-9F4D-41246CDEA120",
+      "productId" : "app-range",
+      "sku" : "APP-RNG-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "7AA267BA-2E7B-41CC-B74B-71CA3B8D8D31",
+      "productId" : "island",
+      "sku" : "ISL-1800",
+      "wallId" : null,
+      "width" : 1800
+    },
+    {
+      "elevation" : 0,
+      "id" : "A3D01C51-9F93-44E4-A5BC-F20B2352BD11",
+      "productId" : "tall-pantry",
+      "sku" : "T2D-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 1450,
+      "id" : "BFAEA1BD-E056-42C9-A3CB-B486336F85BC",
+      "productId" : "wall-2d",
+      "sku" : "W2D-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "FACEF428-04DD-42AA-B89E-C48B75192AAD",
+      "productId" : "base-1d",
+      "sku" : "B1D-600",
+      "wallId" : "3DAE89CC-CB74-41F3-9F5C-893163D19D96",
+      "width" : 600
+    }
+  ],
+  "name" : "Sample Kitchen",
+  "rules" : [
+    "OK-UNVERIFIED|"
+  ]
+}

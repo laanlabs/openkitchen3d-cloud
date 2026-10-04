@@ -1,0 +1,109 @@
+{
+  "cabinets" : [
+    {
+      "elevation" : 0,
+      "id" : "1268B5B4-B877-4735-BB96-8E6E45CB2DFA",
+      "productId" : "base-1d",
+      "sku" : "B1D-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "1B8624BC-ED67-4E07-8552-702C9E28094D",
+      "productId" : "island",
+      "sku" : "ISL-1800",
+      "wallId" : null,
+      "width" : 1800
+    },
+    {
+      "elevation" : 0,
+      "id" : "34517524-D159-415F-B422-8E2717997BD4",
+      "productId" : "base-1d",
+      "sku" : "B1D-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 1550,
+      "id" : "63014067-3DF1-4CC4-A78A-490C808E93AD",
+      "productId" : "wall-hood",
+      "sku" : "APP-HD-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "698F97DE-6ABF-4FF0-A14C-8C79517342E3",
+      "productId" : "base-sink",
+      "sku" : "SB-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 1450,
+      "id" : "7B5B3C85-6E79-4BBD-8C1C-D9FA493B8A33",
+      "productId" : "wall-2d",
+      "sku" : "W2D-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "82F8C18E-5205-4408-9D47-86590263D3A3",
+      "productId" : "base-3dr",
+      "sku" : "B3DR-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "A3530699-E28D-436A-A252-6B113C127FDC",
+      "productId" : "tall-pantry",
+      "sku" : "T2D-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "A4162808-B936-457D-9167-4D468C29BA4E",
+      "productId" : "app-range",
+      "sku" : "APP-RNG-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "B51ABDE2-9DA8-4C96-92EF-F3EBA8BB7F9A",
+      "productId" : "base-1d",
+      "sku" : "B1D-600",
+      "wallId" : "3D0F9B5C-BD5F-41AB-B58A-0CE047597354",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "D30186B7-3A68-4B58-AF5C-FB049338F514",
+      "productId" : "tall-pantry",
+      "sku" : "T2D-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "F41AFD5C-39F5-4972-B90A-3B8B7412BC19",
+      "productId" : "app-dw",
+      "sku" : "APP-DW-600",
+      "wallId" : "AA82908C-D4DA-425F-92B9-46980B0BF905",
+      "width" : 600
+    }
+  ],
+  "name" : "iOS checks",
+  "rules" : [
+    "OK-COLLIDE|1268B5B4-B877-4735-BB96-8E6E45CB2DFA,34517524-D159-415F-B422-8E2717997BD4",
+    "OK-COLLIDE|82F8C18E-5205-4408-9D47-86590263D3A3,D30186B7-3A68-4B58-AF5C-FB049338F514",
+    "OK-COLLIDE|A4162808-B936-457D-9167-4D468C29BA4E,D30186B7-3A68-4B58-AF5C-FB049338F514",
+    "OK-DOOR|B51ABDE2-9DA8-4C96-92EF-F3EBA8BB7F9A",
+    "OK-UNVERIFIED|",
+    "OK-WINDOW|D30186B7-3A68-4B58-AF5C-FB049338F514"
+  ]
+}

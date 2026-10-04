@@ -1,0 +1,72 @@
+{
+  "cabinets" : [
+    {
+      "elevation" : 0,
+      "id" : "408FC11A-D5B8-4028-BDDC-88FA9A94D885",
+      "productId" : "app-dw",
+      "sku" : "APP-DW-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "4791636D-C611-413A-999F-556615C6B072",
+      "productId" : "app-range",
+      "sku" : "APP-RNG-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    },
+    {
+      "elevation" : 1450,
+      "id" : "4F0588B6-D1A0-431E-8809-E65F99D726C7",
+      "productId" : "wall-1d",
+      "sku" : "W1D-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    },
+    {
+      "elevation" : 1450,
+      "id" : "589697EC-3880-43C7-9A12-0D2B887CDCAA",
+      "productId" : "wall-2d",
+      "sku" : "W2D-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "635D521D-7EBF-407B-B5CC-2FA9D9962BE9",
+      "productId" : "base-3dr",
+      "sku" : "B3DR-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "865F58EC-34C4-4B31-AED2-1383F4174C6A",
+      "productId" : "base-1d",
+      "sku" : "B1D-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "8C3B2BCE-B742-492D-8FFD-6C1D7998F36F",
+      "productId" : "app-fridge",
+      "sku" : "APP-REF-600",
+      "wallId" : "4DCC31AA-E08B-4566-ADFE-2484BDC7215C",
+      "width" : 600
+    },
+    {
+      "elevation" : 0,
+      "id" : "8EAB3015-8DCA-4982-88F6-0403B29C8B85",
+      "productId" : "base-sink",
+      "sku" : "SB-600",
+      "wallId" : "8BF50BB6-1F7A-44B7-934A-4BE7FCE2BE44",
+      "width" : 600
+    }
+  ],
+  "name" : "Galley",
+  "rules" : [
+    "OK-UNVERIFIED|"
+  ]
+}

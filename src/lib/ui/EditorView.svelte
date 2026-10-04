@@ -17,6 +17,7 @@
   import { fileName, toOpenPlan } from '../io/openplan';
   import { scheduleCsv } from '../io/csv';
   import { shareUrl } from '../io/share';
+  import { iosImportUrl, transferJson } from '../io/transfer';
   import { saveProject } from '../io/storage';
   import { uid } from '../model/types';
   import { track } from '../firebase';
@@ -37,6 +38,7 @@
   let viewer: Viewer3D | undefined = $state();
   let narrow = $state(false);
   let shareFallback = $state('');
+  let iosLink = $state('');
 
   const p = $derived(editor.project);
   const errors = $derived(editor.warnings.filter((w) => w.severity === 'error').length);
@@ -103,6 +105,13 @@
     }
   }
 
+  async function sendToIos() {
+    showExport = false;
+    await editor.flush();
+    iosLink = await iosImportUrl(p);
+    track('send_to_ios');
+  }
+
   async function makeCopy() {
     const copy: Project = { ...structuredClone(p), id: uid(), name: `${p.name} (copy)`, updatedAt: new Date().toISOString() };
     await saveProject(copy);
@@ -149,6 +158,7 @@
           <div class="dropdown" role="menu">
             <button onclick={() => exportAs('print')}>🖨 Print / PDF (plan, elevations, list)</button>
             <button onclick={() => exportAs('csv')}>📋 Item list (CSV)</button>
+            <button onclick={sendToIos}>📱 Open in the iOS app</button>
             <button onclick={() => exportAs('json')}>📐 OpenPlan3D JSON</button>
             <button onclick={() => exportAs('project')}>💾 OpenKitchen3D project</button>
             <button onclick={() => exportAs('png')}>🖼 3D image (PNG)</button>
@@ -223,6 +233,22 @@
         </div>
         <p class="muted small">Auto-added parts are generated from your runs and update whenever the design changes — nothing is removed without showing here.</p>
         <Schedule {editor} />
+      </div>
+    </div>
+  {/if}
+
+  {#if iosLink}
+    <div class="modal-bg" role="presentation" onclick={(e) => { if (e.target === e.currentTarget) iosLink = ''; }}>
+      <div class="modal share" role="dialog" aria-modal="true" aria-label="Open in the iOS app">
+        <h3>Open in OpenKitchen3D for iOS</h3>
+        <p class="muted small">On an iPhone or iPad with the app installed, tap the button. On a computer, copy the link to your phone or AirDrop the file and open it with OpenKitchen3D.</p>
+        <a class="btn primary big" href={iosLink}>Open in the app</a>
+        <div class="group">
+          <button class="btn" onclick={async () => { try { await navigator.clipboard.writeText(iosLink); editor.notify('App link copied'); } catch { shareFallback = iosLink; } }}>Copy app link</button>
+          <button class="btn" onclick={() => download(fileName(p, 'openplan3d', 'json'), JSON.stringify(transferJson(p), null, 2), 'application/json')}>Download file for AirDrop</button>
+        </div>
+        <p class="muted small">Walls, doors, windows, cabinets, finishes and verification travel to the app. Styles, catalog and worktop settings come back unchanged when you send it back to the web.</p>
+        <div class="mhead"><span></span><button class="btn" onclick={() => (iosLink = '')}>Done</button></div>
       </div>
     </div>
   {/if}

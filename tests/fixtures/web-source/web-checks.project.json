@@ -1,0 +1,230 @@
+{
+ "schema": "openkitchen3d/web-project@0.1",
+ "id": "0B0E0000-0000-4000-8000-00000000000B",
+ "name": "Web checks",
+ "createdAt": "2026-10-04T00:00:00.000Z",
+ "updatedAt": "2026-10-04T00:00:00.000Z",
+ "catalogId": "starter",
+ "units": "metric",
+ "captureSource": "web",
+ "ceilingHeight": 2400,
+ "ceilingVerified": false,
+ "walls": [
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000001",
+   "start": {
+    "x": -60,
+    "y": -60
+   },
+   "end": {
+    "x": 4260,
+    "y": -60
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  },
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000002",
+   "start": {
+    "x": 4260,
+    "y": -60
+   },
+   "end": {
+    "x": 4260,
+    "y": 2260
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  },
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000003",
+   "start": {
+    "x": 4260,
+    "y": 2260
+   },
+   "end": {
+    "x": 2760,
+    "y": 2260
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  },
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000004",
+   "start": {
+    "x": 2760,
+    "y": 2260
+   },
+   "end": {
+    "x": 2760,
+    "y": 3460
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  },
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000005",
+   "start": {
+    "x": 2760,
+    "y": 3460
+   },
+   "end": {
+    "x": -60,
+    "y": 3460
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  },
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000006",
+   "start": {
+    "x": -60,
+    "y": 3460
+   },
+   "end": {
+    "x": -60,
+    "y": -60
+   },
+   "height": 2400,
+   "thickness": 120,
+   "verified": false
+  }
+ ],
+ "openings": [
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000007",
+   "wallId": "0B0E0B00-0000-4000-8000-000000000001",
+   "kind": "window",
+   "position": 0.5,
+   "width": 1200,
+   "height": 1150,
+   "sillHeight": 1050,
+   "hingeLeft": true
+  },
+  {
+   "id": "0B0E0B00-0000-4000-8000-000000000008",
+   "wallId": "0B0E0B00-0000-4000-8000-000000000005",
+   "kind": "door",
+   "position": 0.78,
+   "width": 860,
+   "height": 2050,
+   "sillHeight": 0,
+   "hingeLeft": true
+  }
+ ],
+ "fixtures": [],
+ "kitchen": {
+  "catalogVersion": "generic-starter@0.1",
+  "cabinets": [
+   {
+    "id": "0B0E0B00-0000-4000-8000-000000000009",
+    "productId": "base-2d",
+    "sku": "B2D-600",
+    "family": "base",
+    "anchor": {
+     "x": 2100,
+     "y": 290,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 600,
+    "height": 870,
+    "depth": 580,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0B00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0B00-0000-4000-8000-00000000000A",
+    "productId": "tall-pantry",
+    "sku": "T2D-600",
+    "family": "tall",
+    "anchor": {
+     "x": 2400,
+     "y": 290,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 600,
+    "height": 2170,
+    "depth": 580,
+    "configuration": {},
+    "finishIds": {},
+    "wallId": "0B0E0B00-0000-4000-8000-000000000001"
+   },
+   {
+    "id": "0B0E0B00-0000-4000-8000-00000000000B",
+    "productId": "base-1d",
+    "sku": "B1D-600",
+    "family": "base",
+    "anchor": {
+     "x": 560.4000000000001,
+     "y": 3110,
+     "elevation": 0
+    },
+    "rotation": 180,
+    "width": 600,
+    "height": 870,
+    "depth": 580,
+    "configuration": {
+     "hinge": "left"
+    },
+    "finishIds": {},
+    "wallId": "0B0E0B00-0000-4000-8000-000000000005"
+   },
+   {
+    "id": "0B0E0B00-0000-4000-8000-00000000000C",
+    "productId": "island",
+    "sku": "ISL-1800",
+    "family": "island",
+    "anchor": {
+     "x": 2100,
+     "y": 1730,
+     "elevation": 0
+    },
+    "rotation": 0,
+    "width": 1800,
+    "height": 870,
+    "depth": 900,
+    "configuration": {},
+    "finishIds": {}
+   },
+   {
+    "id": "0B0E0B00-0000-4000-8000-00000000000D",
+    "productId": "wall-1d",
+    "sku": "W1D-600",
+    "family": "wall",
+    "anchor": {
+     "x": 2360,
+     "y": 3235,
+     "elevation": 1450
+    },
+    "rotation": 180,
+    "width": 600,
+    "height": 720,
+    "depth": 330,
+    "configuration": {
+     "hinge": "left"
+    },
+    "finishIds": {},
+    "wallId": "0B0E0B00-0000-4000-8000-000000000005"
+   }
+  ],
+  "style": {
+   "front": "white-matte",
+   "carcass": "white",
+   "handle": "bar-steel",
+   "countertop": "quartz-white"
+  },
+  "countertop": {
+   "thickness": 40,
+   "overhang": 20
+  },
+  "currency": "USD"
+ }
+}

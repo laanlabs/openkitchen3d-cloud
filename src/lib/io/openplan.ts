@@ -7,14 +7,39 @@ import { uid } from '../model/types';
 import { catalogVersion, COUNTERTOP, defaultStyle, product } from '../catalog/catalog';
 
 export const KITCHEN_SCHEMA = 'openkitchen3d/ios-project@0.1';
-const m = (mm: number) => Math.round(mm) / 1000;
+const m = (mm: number) => mm / 1000; // full precision, like the iOS exporter
 
 export function transform(cx: number, cz: number, angle: number, y: number): number[] {
   const c = Math.cos(angle), s = Math.sin(angle);
   return [c, 0, s, 0, 0, 1, 0, 0, -s, 0, c, 0, cx, y, cz, 1];
 }
 
-export function toOpenPlan(p: Project): Record<string, unknown> {
+/** Web-only settings carried in `openkitchen3d.web`. iOS stores this object verbatim and writes it back. */
+export interface WebExtras {
+  catalogId: Project['catalogId'];
+  units: Project['units'];
+  style: Project['kitchen']['style'];
+  countertop: Project['kitchen']['countertop'];
+  currency: string;
+  /** Per-cabinet data iOS does not model, keyed by cabinet id. */
+  cabinets: Record<string, { finishIds?: KitchenCabinetInstance['finishIds']; configuration?: KitchenCabinetInstance['configuration']; priceOverride?: number }>;
+}
+
+export function webExtras(p: Project): WebExtras {
+  const cabinets: WebExtras['cabinets'] = {};
+  for (const c of p.kitchen.cabinets) {
+    const { front: _f, ...rest } = c.finishIds;
+    const e: WebExtras['cabinets'][string] = {};
+    if (Object.keys(rest).length) e.finishIds = rest;
+    if (Object.keys(c.configuration).length) e.configuration = c.configuration;
+    if (c.priceOverride != null) e.priceOverride = c.priceOverride;
+    if (Object.keys(e).length) cabinets[c.id] = e;
+  }
+  return { catalogId: p.catalogId, units: p.units, style: p.kitchen.style, countertop: p.kitchen.countertop, currency: p.kitchen.currency, cabinets };
+}
+
+export function toOpenPlan(p: Project, opts: { embedWebProject?: boolean } = {}): Record<string, unknown> {
+  const embed = opts.embedWebProject ?? true;
   const walls = p.walls.map((w) => {
     const mid = wallMid(w);
     return {
@@ -90,8 +115,9 @@ export function toOpenPlan(p: Project): Record<string, unknown> {
         finishId: c.finishIds.front ?? p.kitchen.style.front,
         ...(c.wallId ? { wallId: c.wallId } : {})
       })),
-      // Web-only, additive: full-fidelity web project for lossless round trips.
-      webProject: p
+      // Additive, web-only. iOS keeps `web` verbatim; `webProject` is for web→web file round trips only.
+      web: webExtras(p),
+      ...(embed ? { webProject: p } : {})
     }
   };
 }
@@ -111,8 +137,12 @@ const iosFamily = (f: string): CabinetFamily => (['base', 'wall', 'tall', 'appli
 /** Reads an iOS / OpenPlan3D prepared RoomPlan JSON (or a web project) into a Project. */
 export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Project {
   if (isWebProject(j)) return j;
-  if (isWebProject(j.openkitchen3d?.webProject)) return j.openkitchen3d.webProject;
   const block: Json | undefined = j.openkitchen3d;
+  // The embedded web project is only trusted when the web wrote the file; anything iOS re-exports
+  // is read from the shared block so its edits win.
+  if (block?.producer === 'web' && isWebProject(block.webProject)) return block.webProject;
+  const extras: Partial<WebExtras> = block?.web ?? {};
+  const style = { ...defaultStyle, ...(extras.style ?? {}) };
   const verification = block?.verification ?? {};
   const walls: Wall[] = (j.walls ?? []).map((w: Json) => {
     const ps = pose(w.transform);
@@ -171,8 +201,12 @@ export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Projec
         width: (meta.width ?? o.dimensions[0]) * 1000,
         height: (meta.height ?? o.dimensions[1]) * 1000,
         depth: (meta.depth ?? o.dimensions[2]) * 1000,
-        configuration: {},
-        finishIds: meta.finishId && meta.finishId !== defaultStyle.front ? { front: meta.finishId } : {}
+        configuration: { ...(extras.cabinets?.[String(o.identifier)]?.configuration ?? {}) },
+        finishIds: {
+          ...(extras.cabinets?.[String(o.identifier)]?.finishIds ?? {}),
+          ...(meta.finishId && meta.finishId !== style.front ? { front: meta.finishId } : {})
+        },
+        ...(extras.cabinets?.[String(o.identifier)]?.priceOverride != null ? { priceOverride: extras.cabinets[String(o.identifier)].priceOverride } : {})
       });
     } else {
       fixtures.push({ id: String(o.identifier ?? uid()), category: catKey(o.category), center: v(ps.x, ps.y), rotation: deg(ps.angle), width: w, depth: d, height: h });
@@ -186,8 +220,8 @@ export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Projec
     name: String(block?.name ?? j.sections?.[0]?.displayName ?? fallbackName),
     createdAt: block?.createdAt ?? now,
     updatedAt: now,
-    catalogId: 'starter',
-    units: 'metric',
+    catalogId: extras.catalogId ?? 'starter',
+    units: extras.units ?? 'metric',
     captureSource: (block?.captureSource as Project['captureSource']) ?? 'lidar',
     ceilingHeight: ceiling,
     ceilingVerified: !!verification.ceilingHeight,
@@ -195,11 +229,11 @@ export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Projec
     openings,
     fixtures,
     kitchen: {
-      catalogVersion: block?.catalogVersion ?? catalogVersion('starter'),
+      catalogVersion: extras.catalogId ? catalogVersion(extras.catalogId) : block?.catalogVersion ?? catalogVersion('starter'),
       cabinets,
-      style: { ...defaultStyle },
-      countertop: { ...COUNTERTOP },
-      currency: 'USD'
+      style,
+      countertop: { ...COUNTERTOP, ...(extras.countertop ?? {}) },
+      currency: extras.currency ?? 'USD'
     }
   };
 }

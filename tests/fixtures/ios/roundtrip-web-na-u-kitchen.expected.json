@@ -1,0 +1,136 @@
+{
+  "cabinets" : [
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-000000000007",
+      "productId" : "generic-na-base-sb-876-610",
+      "sku" : "SB30",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 762
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-000000000008",
+      "productId" : "generic-appliances-na-dishwasher-dishwasher-built-in",
+      "sku" : "DW24",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 610
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-000000000009",
+      "productId" : "generic-na-base-b-876-610",
+      "sku" : "B48",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 1219
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-00000000000A",
+      "productId" : "generic-na-base-b-876-610",
+      "sku" : "B42",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 1067
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-00000000000B",
+      "productId" : "generic-na-base-b-876-610",
+      "sku" : "B18",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 457
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-00000000000C",
+      "productId" : "generic-na-base-b-876-610",
+      "sku" : "B30",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000004",
+      "width" : 762
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-00000000000D",
+      "productId" : "generic-appliances-na-range-freestanding\/slide-in-range",
+      "sku" : "RNG30",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000002",
+      "width" : 762
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-00000000000E",
+      "productId" : "generic-na-base-b-876-610",
+      "sku" : "B48",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000002",
+      "width" : 1219
+    },
+    {
+      "elevation" : 0,
+      "id" : "0B0E0A00-0000-4000-8000-00000000000F",
+      "productId" : "generic-na-base-b-876-610",
+      "sku" : "B27",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000002",
+      "width" : 686
+    },
+    {
+      "elevation" : 1372,
+      "id" : "0B0E0A00-0000-4000-8000-000000000010",
+      "productId" : "generic-na-wall-w-762-305",
+      "sku" : "W3630",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 914
+    },
+    {
+      "elevation" : 1372,
+      "id" : "0B0E0A00-0000-4000-8000-000000000011",
+      "productId" : "generic-na-wall-w-762-305",
+      "sku" : "W3630",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000001",
+      "width" : 914
+    },
+    {
+      "elevation" : 1372,
+      "id" : "0B0E0A00-0000-4000-8000-000000000012",
+      "productId" : "generic-na-wall-w-762-305",
+      "sku" : "W3630",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000004",
+      "width" : 914
+    },
+    {
+      "elevation" : 1372,
+      "id" : "0B0E0A00-0000-4000-8000-000000000013",
+      "productId" : "generic-na-wall-w-762-305",
+      "sku" : "W3030",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000004",
+      "width" : 762
+    },
+    {
+      "elevation" : 1372,
+      "id" : "0B0E0A00-0000-4000-8000-000000000014",
+      "productId" : "generic-na-wall-w-762-305",
+      "sku" : "W2730",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000002",
+      "width" : 686
+    },
+    {
+      "elevation" : 1600,
+      "id" : "0B0E0A00-0000-4000-8000-000000000015",
+      "productId" : "generic-appliances-na-range-hood-range-hood",
+      "sku" : "HD30",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000002",
+      "width" : 762
+    },
+    {
+      "elevation" : 1372,
+      "id" : "0B0E0A00-0000-4000-8000-000000000016",
+      "productId" : "generic-na-wall-w-762-305",
+      "sku" : "W3630",
+      "wallId" : "0B0E0A00-0000-4000-8000-000000000002",
+      "width" : 914
+    }
+  ],
+  "name" : "Web NA U-kitchen",
+  "rules" : [
+    "OK-UNVERIFIED|"
+  ]
+}

@@ -1,7 +1,7 @@
 // Deterministic, machine-readable design checks — a port of openkitchen3d-ios Design/Validation.swift
 // with the same stable rule ids, plus appliance door swing. Guidance only, never a code-compliance claim.
 import {
-  add, cabinetCenter, cabinetCorners, cabinetFront, deg, footprint, inwardNormal, polygonCentroid, norm,
+  add, cabinetCenter, cabinetCorners, cabinetFront, deg, footprint, inwardNormal, norm,
   pointInPolygon, polygonDistance, rectanglesOverlap, roomPolygon, scale, sub, wallPoint
 } from '../model/geometry';
 import type { KitchenCabinetInstance, Project, Vec2 } from '../model/types';
@@ -57,7 +57,8 @@ export function validate(p: Project): DesignWarning[] {
 
   const poly = roomPolygon(p);
   if (poly) {
-    const centroid = polygonCentroid(poly);
+    // Vertex average, as in iOS Validation.swift, so both platforms nudge identically.
+    const centroid = scale(poly.reduce((a, q) => add(a, q), { x: 0, y: 0 }), 1 / poly.length);
     const inside = (q: Vec2) => {
       // Nudge toward the centroid so cabinets flush to a wall face count as inside.
       const nudged = add(q, scale(norm(sub(centroid, q)), 20));
