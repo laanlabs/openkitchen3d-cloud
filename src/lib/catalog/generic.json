@@ -1,0 +1,3202 @@
+{
+ "source": "openkitchen3d-www/catalog/data/items.json",
+ "schemaVersion": 1,
+ "total": 226,
+ "items": [
+  {
+   "id": "generic-na__B09",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B09",
+   "name": "Base cabinet 9\" — one door, one drawer",
+   "w": 229,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 0,
+    "hinge": "left-or-right",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B12",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B12",
+   "name": "Base cabinet 12\" — one door, one drawer",
+   "w": 305,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "hinge": "left-or-right",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B15",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B15",
+   "name": "Base cabinet 15\" — one door, one drawer",
+   "w": 381,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "hinge": "left-or-right",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B18",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B18",
+   "name": "Base cabinet 18\" — one door, one drawer",
+   "w": 457,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "hinge": "left-or-right",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B21",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B21",
+   "name": "Base cabinet 21\" — one door, one drawer",
+   "w": 533,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "hinge": "left-or-right",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B24",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B24",
+   "name": "Base cabinet 24\" — two doors, one drawer",
+   "w": 610,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B27",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B27",
+   "name": "Base cabinet 27\" — two doors, one drawer",
+   "w": 686,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B30",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B30",
+   "name": "Base cabinet 30\" — two doors, one drawer",
+   "w": 762,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B33",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B33",
+   "name": "Base cabinet 33\" — two doors, one drawer",
+   "w": 838,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B36",
+   "name": "Base cabinet 36\" — two doors, one drawer",
+   "w": 914,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B39",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B39",
+   "name": "Base cabinet 39\" — two doors, one drawer",
+   "w": 991,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B42",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B42",
+   "name": "Base cabinet 42\" — two doors, one drawer",
+   "w": 1067,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B45",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B45",
+   "name": "Base cabinet 45\" — two doors, one drawer",
+   "w": 1143,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__B48",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "B48",
+   "name": "Base cabinet 48\" — two doors, one drawer",
+   "w": 1219,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "hinge": "pair",
+    "shelves": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB12",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB12",
+   "name": "Drawer base 12\" — three drawers",
+   "w": 305,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB15",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB15",
+   "name": "Drawer base 15\" — three drawers",
+   "w": 381,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB18",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB18",
+   "name": "Drawer base 18\" — three drawers",
+   "w": 457,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB21",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB21",
+   "name": "Drawer base 21\" — three drawers",
+   "w": 533,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB24",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB24",
+   "name": "Drawer base 24\" — three drawers",
+   "w": 610,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB27",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB27",
+   "name": "Drawer base 27\" — three drawers",
+   "w": 686,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB30",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB30",
+   "name": "Drawer base 30\" — three drawers",
+   "w": 762,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB33",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB33",
+   "name": "Drawer base 33\" — three drawers",
+   "w": 838,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__DB36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "DB36",
+   "name": "Drawer base 36\" — three drawers",
+   "w": 914,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 0,
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__SB30",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "SB30",
+   "name": "Sink base 30\" — two doors, false front",
+   "w": 762,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 0,
+    "falseFront": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__SB33",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "SB33",
+   "name": "Sink base 33\" — two doors, false front",
+   "w": 838,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 0,
+    "falseFront": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__SB36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "SB36",
+   "name": "Sink base 36\" — two doors, false front",
+   "w": 914,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 0,
+    "falseFront": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__SB42",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "SB42",
+   "name": "Sink base 42\" — two doors, false front",
+   "w": 1067,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 0,
+    "falseFront": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__BBC36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "BBC36",
+   "name": "Blind corner base 36\"",
+   "w": 914,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "blindSide": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__BBC39",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "BBC39",
+   "name": "Blind corner base 39\"",
+   "w": 991,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "blindSide": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__BBC42",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "BBC42",
+   "name": "Blind corner base 42\"",
+   "w": 1067,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "blindSide": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__BBC45",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "BBC45",
+   "name": "Blind corner base 45\"",
+   "w": 1143,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "blindSide": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__BBC48",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "BBC48",
+   "name": "Blind corner base 48\"",
+   "w": 1219,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "doors": 1,
+    "drawers": 1,
+    "blindSide": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__LS33",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "LS33",
+   "name": "Lazy susan corner base 33\" × 33\"",
+   "w": 838,
+   "h": 876,
+   "d": 838,
+   "configuration": {
+    "doors": 2,
+    "hardware": "lazy-susan",
+    "footprint": "L"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__LS36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "LS36",
+   "name": "Lazy susan corner base 36\" × 36\"",
+   "w": 914,
+   "h": 876,
+   "d": 914,
+   "configuration": {
+    "doors": 2,
+    "hardware": "lazy-susan",
+    "footprint": "L"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W0930",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W0930",
+   "name": "Wall cabinet 9\" × 30\"",
+   "w": 229,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 1,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1230",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1230",
+   "name": "Wall cabinet 12\" × 30\"",
+   "w": 305,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 1,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1530",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1530",
+   "name": "Wall cabinet 15\" × 30\"",
+   "w": 381,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 1,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1830",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1830",
+   "name": "Wall cabinet 18\" × 30\"",
+   "w": 457,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 1,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2130",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2130",
+   "name": "Wall cabinet 21\" × 30\"",
+   "w": 533,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 1,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2430",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2430",
+   "name": "Wall cabinet 24\" × 30\"",
+   "w": 610,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 1,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2730",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2730",
+   "name": "Wall cabinet 27\" × 30\"",
+   "w": 686,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 1,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3030",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3030",
+   "name": "Wall cabinet 30\" × 30\"",
+   "w": 762,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 1,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3330",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3330",
+   "name": "Wall cabinet 33\" × 30\"",
+   "w": 838,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 1,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3630",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3630",
+   "name": "Wall cabinet 36\" × 30\"",
+   "w": 914,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 1,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W0936",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W0936",
+   "name": "Wall cabinet 9\" × 36\"",
+   "w": 229,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1236",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1236",
+   "name": "Wall cabinet 12\" × 36\"",
+   "w": 305,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1536",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1536",
+   "name": "Wall cabinet 15\" × 36\"",
+   "w": 381,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1836",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1836",
+   "name": "Wall cabinet 18\" × 36\"",
+   "w": 457,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2136",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2136",
+   "name": "Wall cabinet 21\" × 36\"",
+   "w": 533,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2436",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2436",
+   "name": "Wall cabinet 24\" × 36\"",
+   "w": 610,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2736",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2736",
+   "name": "Wall cabinet 27\" × 36\"",
+   "w": 686,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3036",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3036",
+   "name": "Wall cabinet 30\" × 36\"",
+   "w": 762,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3336",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3336",
+   "name": "Wall cabinet 33\" × 36\"",
+   "w": 838,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3636",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3636",
+   "name": "Wall cabinet 36\" × 36\"",
+   "w": 914,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W0942",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W0942",
+   "name": "Wall cabinet 9\" × 42\"",
+   "w": 229,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1242",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1242",
+   "name": "Wall cabinet 12\" × 42\"",
+   "w": 305,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1542",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1542",
+   "name": "Wall cabinet 15\" × 42\"",
+   "w": 381,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W1842",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W1842",
+   "name": "Wall cabinet 18\" × 42\"",
+   "w": 457,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2142",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2142",
+   "name": "Wall cabinet 21\" × 42\"",
+   "w": 533,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "shelves": 2,
+    "hinge": "left-or-right"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2442",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2442",
+   "name": "Wall cabinet 24\" × 42\"",
+   "w": 610,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W2742",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W2742",
+   "name": "Wall cabinet 27\" × 42\"",
+   "w": 686,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3042",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3042",
+   "name": "Wall cabinet 30\" × 42\"",
+   "w": 762,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3342",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3342",
+   "name": "Wall cabinet 33\" × 42\"",
+   "w": 838,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3642",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3642",
+   "name": "Wall cabinet 36\" × 42\"",
+   "w": 914,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 2,
+    "shelves": 2,
+    "hinge": "pair"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3012",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3012",
+   "name": "Wall cabinet 30\" × 12\" (over fridge/range)",
+   "w": 762,
+   "h": 305,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3015",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3015",
+   "name": "Wall cabinet 30\" × 15\" (over fridge/range)",
+   "w": 762,
+   "h": 381,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3018",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3018",
+   "name": "Wall cabinet 30\" × 18\" (over fridge/range)",
+   "w": 762,
+   "h": 457,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3024D24",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3024-24D",
+   "name": "Refrigerator wall cabinet 30\" × 24\", 24\" deep",
+   "w": 762,
+   "h": 610,
+   "d": 610,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3312",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3312",
+   "name": "Wall cabinet 33\" × 12\" (over fridge/range)",
+   "w": 838,
+   "h": 305,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3315",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3315",
+   "name": "Wall cabinet 33\" × 15\" (over fridge/range)",
+   "w": 838,
+   "h": 381,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3318",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3318",
+   "name": "Wall cabinet 33\" × 18\" (over fridge/range)",
+   "w": 838,
+   "h": 457,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3324D24",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3324-24D",
+   "name": "Refrigerator wall cabinet 33\" × 24\", 24\" deep",
+   "w": 838,
+   "h": 610,
+   "d": 610,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3612",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3612",
+   "name": "Wall cabinet 36\" × 12\" (over fridge/range)",
+   "w": 914,
+   "h": 305,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3615",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3615",
+   "name": "Wall cabinet 36\" × 15\" (over fridge/range)",
+   "w": 914,
+   "h": 381,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3618",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3618",
+   "name": "Wall cabinet 36\" × 18\" (over fridge/range)",
+   "w": 914,
+   "h": 457,
+   "d": 305,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__W3624D24",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "W3624-24D",
+   "name": "Refrigerator wall cabinet 36\" × 24\", 24\" deep",
+   "w": 914,
+   "h": 610,
+   "d": 610,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__WDC2430",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "WDC2430",
+   "name": "Diagonal corner wall cabinet 24\" × 30\"",
+   "w": 610,
+   "h": 762,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "footprint": "diagonal"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__WDC2436",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "WDC2436",
+   "name": "Diagonal corner wall cabinet 24\" × 36\"",
+   "w": 610,
+   "h": 914,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "footprint": "diagonal"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__WDC2442",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "corner",
+   "applianceType": null,
+   "sku": "WDC2442",
+   "name": "Diagonal corner wall cabinet 24\" × 42\"",
+   "w": 610,
+   "h": 1067,
+   "d": 305,
+   "configuration": {
+    "doors": 1,
+    "footprint": "diagonal"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U1884",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U1884-24",
+   "name": "Tall pantry 18\" × 84\"",
+   "w": 457,
+   "h": 2134,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U1890",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U1890-24",
+   "name": "Tall pantry 18\" × 90\"",
+   "w": 457,
+   "h": 2286,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U1896",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U1896-24",
+   "name": "Tall pantry 18\" × 96\"",
+   "w": 457,
+   "h": 2438,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U2484",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U2484-24",
+   "name": "Tall pantry 24\" × 84\"",
+   "w": 610,
+   "h": 2134,
+   "d": 610,
+   "configuration": {
+    "doors": 4,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U2490",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U2490-24",
+   "name": "Tall pantry 24\" × 90\"",
+   "w": 610,
+   "h": 2286,
+   "d": 610,
+   "configuration": {
+    "doors": 4,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U2496",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U2496-24",
+   "name": "Tall pantry 24\" × 96\"",
+   "w": 610,
+   "h": 2438,
+   "d": 610,
+   "configuration": {
+    "doors": 4,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U3084",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U3084-24",
+   "name": "Tall pantry 30\" × 84\"",
+   "w": 762,
+   "h": 2134,
+   "d": 610,
+   "configuration": {
+    "doors": 4,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U3090",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U3090-24",
+   "name": "Tall pantry 30\" × 90\"",
+   "w": 762,
+   "h": 2286,
+   "d": 610,
+   "configuration": {
+    "doors": 4,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__U3096",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "U3096-24",
+   "name": "Tall pantry 30\" × 96\"",
+   "w": 762,
+   "h": 2438,
+   "d": 610,
+   "configuration": {
+    "doors": 4,
+    "shelves": 5
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__OV3084",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "OV3084",
+   "name": "Tall oven cabinet 30\" × 84\" (single or double wall oven)",
+   "w": 762,
+   "h": 2134,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "applianceOpening": "wall-oven"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__OV3090",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "OV3090",
+   "name": "Tall oven cabinet 30\" × 90\" (single or double wall oven)",
+   "w": 762,
+   "h": 2286,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "applianceOpening": "wall-oven"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__OV3096",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "OV3096",
+   "name": "Tall oven cabinet 30\" × 96\" (single or double wall oven)",
+   "w": 762,
+   "h": 2438,
+   "d": 610,
+   "configuration": {
+    "doors": 2,
+    "drawers": 1,
+    "applianceOpening": "wall-oven"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F3B34_5",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "BF3-34.5",
+   "name": "Base filler 3\" × 34.5\"",
+   "w": 76,
+   "h": 876,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F6B34_5",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "BF6-34.5",
+   "name": "Base filler 6\" × 34.5\"",
+   "w": 152,
+   "h": 876,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F3W30",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "WF3-30",
+   "name": "Wall filler 3\" × 30\"",
+   "w": 76,
+   "h": 762,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F6W30",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "WF6-30",
+   "name": "Wall filler 6\" × 30\"",
+   "w": 152,
+   "h": 762,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F3W36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "WF3-36",
+   "name": "Wall filler 3\" × 36\"",
+   "w": 76,
+   "h": 914,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F6W36",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "WF6-36",
+   "name": "Wall filler 6\" × 36\"",
+   "w": 152,
+   "h": 914,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F3W42",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "WF3-42",
+   "name": "Wall filler 3\" × 42\"",
+   "w": 76,
+   "h": 1067,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F6W42",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "WF6-42",
+   "name": "Wall filler 6\" × 42\"",
+   "w": 152,
+   "h": 1067,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F3T96",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "TF3-96",
+   "name": "Tall filler 3\" × 96\"",
+   "w": 76,
+   "h": 2438,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__F6T96",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "filler",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "TF6-96",
+   "name": "Tall filler 6\" × 96\"",
+   "w": 152,
+   "h": 2438,
+   "d": 19,
+   "configuration": {
+    "scribeable": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__EP-base",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "panel",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "EP-BASE",
+   "name": "Finished end panel — base",
+   "w": 19,
+   "h": 876,
+   "d": 610,
+   "configuration": {},
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__EP-wall",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "panel",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "EP-WALL",
+   "name": "Finished end panel — wall",
+   "w": 19,
+   "h": 1067,
+   "d": 305,
+   "configuration": {},
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__EP-tall",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "panel",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "EP-TALL",
+   "name": "Finished end panel — tall",
+   "w": 19,
+   "h": 2438,
+   "d": 610,
+   "configuration": {},
+   "license": "MIT"
+  },
+  {
+   "id": "generic-na__TK96",
+   "catalogFamily": "generic-na",
+   "region": "NA",
+   "kind": "panel",
+   "cabinetClass": "accessory",
+   "applianceType": null,
+   "sku": "TK96",
+   "name": "Toe-kick 96\" × 4.5\"",
+   "w": 2438,
+   "h": 114,
+   "d": 6,
+   "configuration": {},
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U150",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U150",
+   "name": "Base unit 150 mm",
+   "w": 150,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U200",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U200",
+   "name": "Base unit 200 mm",
+   "w": 200,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U300",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U300",
+   "name": "Base unit 300 mm",
+   "w": 300,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U400",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U400",
+   "name": "Base unit 400 mm",
+   "w": 400,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U450",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U450",
+   "name": "Base unit 450 mm",
+   "w": 450,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U500",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U500",
+   "name": "Base unit 500 mm",
+   "w": 500,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U600",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U600",
+   "name": "Base unit 600 mm",
+   "w": 600,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 1,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U800",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U800",
+   "name": "Base unit 800 mm",
+   "w": 800,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 2,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U900",
+   "name": "Base unit 900 mm",
+   "w": 900,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 2,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U1000",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U1000",
+   "name": "Base unit 1000 mm",
+   "w": 1000,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 2,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__U1200",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "U1200",
+   "name": "Base unit 1200 mm",
+   "w": 1200,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "doors": 2,
+    "plinthMm": [
+     100,
+     150
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD300",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD300",
+   "name": "Drawer base unit 300 mm — three drawers",
+   "w": 300,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD400",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD400",
+   "name": "Drawer base unit 400 mm — three drawers",
+   "w": 400,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD450",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD450",
+   "name": "Drawer base unit 450 mm — three drawers",
+   "w": 450,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD500",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD500",
+   "name": "Drawer base unit 500 mm — three drawers",
+   "w": 500,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD600",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD600",
+   "name": "Drawer base unit 600 mm — three drawers",
+   "w": 600,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD800",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD800",
+   "name": "Drawer base unit 800 mm — three drawers",
+   "w": 800,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD900",
+   "name": "Drawer base unit 900 mm — three drawers",
+   "w": 900,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD1000",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD1000",
+   "name": "Drawer base unit 1000 mm — three drawers",
+   "w": 1000,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__UD1200",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "base",
+   "applianceType": null,
+   "sku": "UD1200",
+   "name": "Drawer base unit 1200 mm — three drawers",
+   "w": 1200,
+   "h": 720,
+   "d": 560,
+   "configuration": {
+    "drawers": 3
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H300-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H300-720",
+   "name": "Wall unit 300 × 720 mm",
+   "w": 300,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H400-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H400-720",
+   "name": "Wall unit 400 × 720 mm",
+   "w": 400,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H450-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H450-720",
+   "name": "Wall unit 450 × 720 mm",
+   "w": 450,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H500-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H500-720",
+   "name": "Wall unit 500 × 720 mm",
+   "w": 500,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H600-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H600-720",
+   "name": "Wall unit 600 × 720 mm",
+   "w": 600,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H800-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H800-720",
+   "name": "Wall unit 800 × 720 mm",
+   "w": 800,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H900-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H900-720",
+   "name": "Wall unit 900 × 720 mm",
+   "w": 900,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H1000-720",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H1000-720",
+   "name": "Wall unit 1000 × 720 mm",
+   "w": 1000,
+   "h": 720,
+   "d": 320,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H300-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H300-900",
+   "name": "Wall unit 300 × 900 mm",
+   "w": 300,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H400-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H400-900",
+   "name": "Wall unit 400 × 900 mm",
+   "w": 400,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H450-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H450-900",
+   "name": "Wall unit 450 × 900 mm",
+   "w": 450,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H500-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H500-900",
+   "name": "Wall unit 500 × 900 mm",
+   "w": 500,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H600-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H600-900",
+   "name": "Wall unit 600 × 900 mm",
+   "w": 600,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 1
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H800-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H800-900",
+   "name": "Wall unit 800 × 900 mm",
+   "w": 800,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H900-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H900-900",
+   "name": "Wall unit 900 × 900 mm",
+   "w": 900,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__H1000-900",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "wall",
+   "applianceType": null,
+   "sku": "H1000-900",
+   "name": "Wall unit 1000 × 900 mm",
+   "w": 1000,
+   "h": 900,
+   "d": 320,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T400-1950",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T400-1950",
+   "name": "Tall unit 400 × 1950 mm",
+   "w": 400,
+   "h": 1950,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T400-2100",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T400-2100",
+   "name": "Tall unit 400 × 2100 mm",
+   "w": 400,
+   "h": 2100,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T400-2250",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T400-2250",
+   "name": "Tall unit 400 × 2250 mm",
+   "w": 400,
+   "h": 2250,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T500-1950",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T500-1950",
+   "name": "Tall unit 500 × 1950 mm",
+   "w": 500,
+   "h": 1950,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T500-2100",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T500-2100",
+   "name": "Tall unit 500 × 2100 mm",
+   "w": 500,
+   "h": 2100,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T500-2250",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T500-2250",
+   "name": "Tall unit 500 × 2250 mm",
+   "w": 500,
+   "h": 2250,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T600-1950",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T600-1950",
+   "name": "Tall unit 600 × 1950 mm",
+   "w": 600,
+   "h": 1950,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T600-2100",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T600-2100",
+   "name": "Tall unit 600 × 2100 mm",
+   "w": 600,
+   "h": 2100,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-eu__T600-2250",
+   "catalogFamily": "generic-eu",
+   "region": "EU",
+   "kind": "cabinet",
+   "cabinetClass": "tall",
+   "applianceType": null,
+   "sku": "T600-2250",
+   "name": "Tall unit 600 × 2250 mm",
+   "w": 600,
+   "h": 2250,
+   "d": 560,
+   "configuration": {
+    "doors": 2
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__DW24",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "dishwasher",
+   "sku": "DW24",
+   "name": "Dishwasher 24\" built-in",
+   "w": 610,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "install": "under-counter",
+    "cutoutIn": {
+     "width": 24,
+     "height": 34.5,
+     "depth": 24
+    }
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__DW18",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "dishwasher",
+   "sku": "DW18",
+   "name": "Dishwasher 18\" built-in (compact)",
+   "w": 457,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "install": "under-counter",
+    "cutoutIn": {
+     "width": 18,
+     "height": 34.5,
+     "depth": 24
+    }
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__RNG30",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "range",
+   "sku": "RNG30",
+   "name": "Freestanding/slide-in range 30\"",
+   "w": 762,
+   "h": 914,
+   "d": 660,
+   "configuration": {
+    "install": "between-cabinets",
+    "fuel": [
+     "electric",
+     "gas",
+     "induction",
+     "dual-fuel"
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__RNG36",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "range",
+   "sku": "RNG36",
+   "name": "Range 36\"",
+   "w": 914,
+   "h": 914,
+   "d": 686,
+   "configuration": {
+    "install": "between-cabinets",
+    "fuel": [
+     "gas",
+     "dual-fuel",
+     "induction"
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__RNG48",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "range",
+   "sku": "RNG48",
+   "name": "Range 48\"",
+   "w": 1219,
+   "h": 914,
+   "d": 686,
+   "configuration": {
+    "install": "between-cabinets",
+    "fuel": [
+     "gas",
+     "dual-fuel"
+    ]
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__CT30",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "cooktop",
+   "sku": "CT30",
+   "name": "Cooktop 30\"",
+   "w": 762,
+   "h": 102,
+   "d": 533,
+   "configuration": {
+    "install": "counter-cutout"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__CT36",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "cooktop",
+   "sku": "CT36",
+   "name": "Cooktop 36\"",
+   "w": 914,
+   "h": 102,
+   "d": 533,
+   "configuration": {
+    "install": "counter-cutout"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__WO27S",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "wall-oven",
+   "sku": "WO27S",
+   "name": "Single wall oven 27\"",
+   "w": 686,
+   "h": 737,
+   "d": 610,
+   "configuration": {
+    "install": "tall-cabinet"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__WO30S",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "wall-oven",
+   "sku": "WO30S",
+   "name": "Single wall oven 30\"",
+   "w": 762,
+   "h": 737,
+   "d": 610,
+   "configuration": {
+    "install": "tall-cabinet"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__WO30D",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "wall-oven",
+   "sku": "WO30D",
+   "name": "Double wall oven 30\"",
+   "w": 762,
+   "h": 1321,
+   "d": 610,
+   "configuration": {
+    "install": "tall-cabinet"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__MW30OTR",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "microwave",
+   "sku": "MW30OTR",
+   "name": "Over-the-range microwave 30\"",
+   "w": 762,
+   "h": 432,
+   "d": 406,
+   "configuration": {
+    "install": "wall-mounted-over-range"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__MWD24",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "microwave",
+   "sku": "MWD24",
+   "name": "Microwave drawer 24\"",
+   "w": 610,
+   "h": 381,
+   "d": 584,
+   "configuration": {
+    "install": "under-counter"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__REF30",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "refrigerator",
+   "sku": "REF30",
+   "name": "Refrigerator 30\" (standard depth)",
+   "w": 762,
+   "h": 1753,
+   "d": 864,
+   "configuration": {
+    "install": "freestanding",
+    "doorSwingClearanceRequired": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__REF33",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "refrigerator",
+   "sku": "REF33",
+   "name": "Refrigerator 33\" (standard depth)",
+   "w": 838,
+   "h": 1778,
+   "d": 864,
+   "configuration": {
+    "install": "freestanding",
+    "doorSwingClearanceRequired": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__REF36",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "refrigerator",
+   "sku": "REF36",
+   "name": "Refrigerator 36\" (standard depth)",
+   "w": 914,
+   "h": 1778,
+   "d": 889,
+   "configuration": {
+    "install": "freestanding",
+    "doorSwingClearanceRequired": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__REF36CD",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "refrigerator",
+   "sku": "REF36CD",
+   "name": "Refrigerator 36\" (counter depth)",
+   "w": 914,
+   "h": 1778,
+   "d": 762,
+   "configuration": {
+    "install": "freestanding",
+    "doorSwingClearanceRequired": true
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__REF36BI",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "refrigerator",
+   "sku": "REF36BI",
+   "name": "Built-in refrigerator 36\"",
+   "w": 914,
+   "h": 2134,
+   "d": 610,
+   "configuration": {
+    "install": "built-in",
+    "panelReady": "optional"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__REF42BI",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "refrigerator",
+   "sku": "REF42BI",
+   "name": "Built-in refrigerator 42\"",
+   "w": 1067,
+   "h": 2134,
+   "d": 610,
+   "configuration": {
+    "install": "built-in",
+    "panelReady": "optional"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__HD30",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "range-hood",
+   "sku": "HD30",
+   "name": "Range hood 30\"",
+   "w": 762,
+   "h": 457,
+   "d": 508,
+   "configuration": {
+    "install": "wall-chimney-or-under-cabinet"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__HD36",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "range-hood",
+   "sku": "HD36",
+   "name": "Range hood 36\"",
+   "w": 914,
+   "h": 457,
+   "d": 559,
+   "configuration": {
+    "install": "wall-chimney-or-under-cabinet"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__BEV15",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "beverage",
+   "sku": "BEV15",
+   "name": "Undercounter beverage/wine 15\"",
+   "w": 381,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "install": "under-counter"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__BEV24",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "beverage",
+   "sku": "BEV24",
+   "name": "Undercounter beverage/wine 24\"",
+   "w": 610,
+   "h": 876,
+   "d": 610,
+   "configuration": {
+    "install": "under-counter"
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__SK30",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "sink",
+   "sku": "SK30",
+   "name": "Kitchen sink 30\" (single bowl)",
+   "w": 762,
+   "h": 229,
+   "d": 457,
+   "configuration": {
+    "install": "undermount-or-drop-in",
+    "minBaseIn": 33
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__SK33",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "sink",
+   "sku": "SK33",
+   "name": "Kitchen sink 33\" (double bowl)",
+   "w": 838,
+   "h": 229,
+   "d": 559,
+   "configuration": {
+    "install": "undermount-or-drop-in",
+    "minBaseIn": 36
+   },
+   "license": "MIT"
+  },
+  {
+   "id": "generic-appliances-na__GD",
+   "catalogFamily": "generic-appliances-na",
+   "region": "NA",
+   "kind": "appliance",
+   "cabinetClass": "appliance",
+   "applianceType": "disposal",
+   "sku": "GD",
+   "name": "Garbage disposer",
+   "w": 203,
+   "h": 330,
+   "d": 203,
+   "configuration": {
+    "install": "under-sink"
+   },
+   "license": "MIT"
+  }
+ ]
+}

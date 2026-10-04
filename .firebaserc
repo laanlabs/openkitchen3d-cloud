@@ -1,0 +1,4 @@
+{
+  "projects": { "default": "openkitchen3d" },
+  "targets": { "openkitchen3d": { "hosting": { "app": ["openkitchen3d-cloud"] } } }
+}

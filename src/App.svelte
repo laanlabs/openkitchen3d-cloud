@@ -1,0 +1,64 @@
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import Home from './lib/ui/Home.svelte';
+  import EditorView from './lib/ui/EditorView.svelte';
+  import PrintView from './lib/ui/PrintView.svelte';
+  import type { Project } from './lib/model/types';
+  import { loadProject } from './lib/io/storage';
+  import { decodeShared } from './lib/io/share';
+
+  type Route =
+    | { name: 'home' }
+    | { name: 'editor' | 'print'; project: Project }
+    | { name: 'view'; project: Project }
+    | { name: 'loading' }
+    | { name: 'missing'; message: string };
+
+  let route = $state<Route>({ name: 'loading' });
+  let key = $state(0);
+
+  async function resolve() {
+    const h = location.hash.replace(/^#\/?/, '');
+    const [head, ...rest] = h.split('/');
+    const arg = rest.join('/');
+    if (head === 'p' || head === 'print') {
+      const project = await loadProject(arg);
+      route = project ? { name: head === 'p' ? 'editor' : 'print', project } : { name: 'missing', message: 'This kitchen is not in this browser. Projects are stored locally — open it on the device where you made it, or import its JSON file.' };
+    } else if (head === 'view') {
+      const project = decodeShared(arg);
+      route = project ? { name: 'view', project } : { name: 'missing', message: 'This share link is incomplete or damaged.' };
+    } else {
+      route = { name: 'home' };
+    }
+    key++;
+    document.title = 'name' in route && 'project' in route ? `${route.project.name} — OpenKitchen3D` : 'OpenKitchen3D — free 3D kitchen planner';
+  }
+
+  onMount(() => {
+    resolve();
+    addEventListener('hashchange', resolve);
+    return () => removeEventListener('hashchange', resolve);
+  });
+</script>
+
+{#key key}
+  {#if route.name === 'home'}
+    <Home />
+  {:else if route.name === 'editor'}
+    <EditorView project={route.project} />
+  {:else if route.name === 'view'}
+    <EditorView project={route.project} readonly />
+  {:else if route.name === 'print'}
+    <PrintView project={route.project} />
+  {:else if route.name === 'missing'}
+    <div class="missing">
+      <h2>Kitchen not found</h2>
+      <p>{route.message}</p>
+      <a class="btn primary" href="#/">Go to your kitchens</a>
+    </div>
+  {/if}
+{/key}
+
+<style>
+  .missing { max-width: 520px; margin: 15vh auto; padding: 24px; text-align: center; }
+</style>
