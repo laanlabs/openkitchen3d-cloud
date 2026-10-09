@@ -36,7 +36,8 @@
   let styleId = $state(stylePresets[0].id);
   let name = $state('My kitchen');
 
-  const base = $derived(newProject({ name, room, catalogId, units }));
+  // The name is applied in create(), so typing it does not re-run all six layout proposals.
+  const base = $derived(newProject({ name: 'My kitchen', room, catalogId, units }));
   const proposals = $derived(
     step >= 2 ? Object.fromEntries(layoutKinds.map((k) => [k.id, propose(base, k.id)])) as Record<LayoutKind, Project> : null
   );
@@ -110,7 +111,8 @@
     <Logo word size={30} />
     <nav>
       <a href="https://openkitchen3d.com" target="_blank" rel="noopener">About</a>
-      <a href="https://github.com/laanlabs/openkitchen3d-ios" target="_blank" rel="noopener">iOS app</a>
+      <a href="https://openkitchen3d.com/guides" target="_blank" rel="noopener">Guides</a>
+      <a href="https://openkitchen3d.com/app" target="_blank" rel="noopener">iPhone &amp; iPad app</a>
     </nav>
   </header>
 
@@ -189,8 +191,8 @@
               {/each}
             </div>
             <div class="seg" role="radiogroup" aria-label="Units">
-              <button class:on={units === 'metric'} onclick={() => (units = 'metric')}>Metric</button>
-              <button class:on={units === 'imperial'} onclick={() => { units = 'imperial'; room = imperialize(room); }}>Imperial</button>
+              <button class:on={units === 'metric'} onclick={() => { units = 'metric'; if (catalogId === 'na') catalogId = 'starter'; }}>Metric</button>
+              <button class:on={units === 'imperial'} onclick={() => { units = 'imperial'; room = imperialize(room); if (catalogId === 'starter') catalogId = 'na'; }}>Imperial</button>
             </div>
             <div class="dims">
               <label>Inside width <LengthInput value={room.width} {units} min={1500} max={15000} onchange={(mm) => (room = { ...room, width: mm })} /></label>
@@ -203,9 +205,10 @@
             </div>
             <label class="block">Cabinet catalog
               <select bind:value={catalogId}>
-                {#each catalogs as c (c.id)}<option value={c.id}>{c.name} — {c.blurb}</option>{/each}
+                {#each catalogs as c (c.id)}<option value={c.id}>{c.name}</option>{/each}
               </select>
             </label>
+            <p class="muted small">{catalogs.find((c) => c.id === catalogId)?.blurb}</p>
             <p class="muted small">You can move doors and windows, change wall lengths and verify every dimension in the editor.</p>
             <div class="nav-btns">
               <button class="btn" onclick={() => (step = 0)}>Back</button>
@@ -262,13 +265,14 @@
 
   <footer class="foot muted small">
     OpenKitchen3D is MIT-licensed and powered by OpenPlan3D. Prices are estimates for planning, not quotes. Always field-verify dimensions before ordering.
+    <a href="https://openkitchen3d.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://openkitchen3d.com/support" target="_blank" rel="noopener">Support</a>
   </footer>
 </div>
 
 <style>
   .home { min-height: 100dvh; display: flex; flex-direction: column; background: var(--bg); }
-  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; }
-  .nav nav { display: flex; gap: 18px; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 24px; }
+  .nav nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 18px; min-width: 0; }
   .nav a { color: var(--ink-soft); text-decoration: none; font-size: 14px; }
   .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding: 30px 24px 40px; max-width: 1200px; margin: 0 auto; width: 100%; box-sizing: border-box; }
   h1 { font-size: clamp(30px, 4vw, 48px); line-height: 1.08; margin: 0 0 16px; letter-spacing: -.02em; }
@@ -295,8 +299,9 @@
   .steps button { border: 0; background: var(--panel); padding: 8px 14px; border-radius: 999px; cursor: pointer; font-weight: 600; color: var(--ink-soft); border: 1px solid var(--border); }
   .steps .on button { background: var(--accent); color: white; border-color: var(--accent); }
   .steps .done button { color: var(--accent-ink); }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; }
-  .form { display: flex; flex-direction: column; gap: 14px; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px; align-items: start; }
+  .form { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .form select { max-width: 100%; min-width: 0; }
   .shapes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
   .shape, .layout, .stylecard { display: flex; flex-direction: column; gap: 6px; align-items: stretch; padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); cursor: pointer; font-size: 13px; color: inherit; text-align: left; }
   .shape.on, .layout.on, .stylecard.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
@@ -319,7 +324,7 @@
   .nav-btns { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
   .foot { text-align: center; padding: 24px; margin-top: auto; }
   @media (max-width: 860px) {
-    .hero, .grid { grid-template-columns: 1fr; }
+    .hero, .grid { grid-template-columns: minmax(0, 1fr); }
     .art { display: none; }
     .shapes { grid-template-columns: repeat(2, 1fr); }
     .preview { position: static; }

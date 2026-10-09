@@ -16,6 +16,9 @@
   let project = $state<Project | null>(null);
   let existing = $state<Project | null>(null);
   let producer = $state('');
+  let confirmReplace = $state(false);
+  /** The copy already in this browser was edited after the one in the link. */
+  const newerHere = $derived(!!existing && !!project && existing.updatedAt > project.updatedAt);
 
   onMount(async () => {
     try {
@@ -37,6 +40,10 @@
     const p: Project = mode === 'copy'
       ? { ...project, id: uid(), name: `${project.name} (from ${producer === 'web' ? 'web' : 'iPhone'})` }
       : { ...project, updatedAt: new Date().toISOString() };
+    // Replacing a newer local copy keeps it in the library, so the overwrite can be undone.
+    if (mode === 'replace' && existing && newerHere) {
+      await saveProject({ ...existing, id: uid(), name: `${existing.name} (before import)` });
+    }
     await saveProject(p);
     track('import_link', { producer, mode });
     location.replace(`#/p/${p.id}`);
@@ -61,12 +68,26 @@
         <p class="note">Some dimensions aren't field-verified yet — check them before ordering.</p>
       {/if}
       {#if existing}
-        <p>This kitchen is already in this browser{existing.updatedAt > project.updatedAt ? ', and the copy here was edited more recently' : ''}.</p>
-        <div class="actions">
-          <button class="btn primary" onclick={() => open('replace')}>Replace with this version</button>
-          <button class="btn" onclick={() => open('copy')}>Keep both</button>
-          <a class="btn" href="#/p/{existing.id}">Open the one here</a>
-        </div>
+        <p>This kitchen is already in this browser{newerHere ? ', and the copy here was edited more recently' : ''}.</p>
+        {#if newerHere}
+          <div class="actions">
+            <button class="btn primary" onclick={() => open('copy')}>Keep both</button>
+            <a class="btn" href="#/p/{existing.id}">Open the one here</a>
+            {#if confirmReplace}
+              <button class="btn danger" onclick={() => open('replace')}>Replace the newer copy</button>
+              <button class="btn" onclick={() => (confirmReplace = false)}>Cancel</button>
+            {:else}
+              <button class="btn" onclick={() => (confirmReplace = true)}>Replace with this version…</button>
+            {/if}
+          </div>
+          {#if confirmReplace}<p class="muted small">The copy here is kept in your kitchens as “{existing.name} (before import)”.</p>{/if}
+        {:else}
+          <div class="actions">
+            <button class="btn primary" onclick={() => open('replace')}>Replace with this version</button>
+            <button class="btn" onclick={() => open('copy')}>Keep both</button>
+            <a class="btn" href="#/p/{existing.id}">Open the one here</a>
+          </div>
+        {/if}
       {:else}
         <div class="actions"><button class="btn primary big" onclick={() => open('new')}>Open in the planner</button></div>
       {/if}

@@ -117,3 +117,51 @@ describe('run solver', () => {
     expect(Math.round(fillers[0].width)).toBe(60);
   });
 });
+
+describe('starter layout fixes', () => {
+  const shapes = ['rectangle', 'l', 'galley', 'open'] as const;
+  const cats = ['starter', 'na', 'eu'] as const;
+
+  it('"L + island" places an island in every default room and catalog', () => {
+    for (const shape of shapes) for (const catalogId of cats) {
+      const p = propose(newProject({ name: 't', room: defaultRoom(shape), catalogId, units: 'metric' }), 'island');
+      expect(p.kitchen.cabinets.some((c) => c.family === 'island'), `${shape}/${catalogId}`).toBe(true);
+    }
+  });
+
+  it('the island in the default rectangle room passes the aisle check', () => {
+    const p = propose(newProject({ name: 't', room: defaultRoom('rectangle'), catalogId: 'starter', units: 'metric' }), 'island');
+    const island = p.kitchen.cabinets.find((c) => c.family === 'island')!;
+    expect(validate(p).filter((w) => w.cabinetIds.includes(island.id))).toEqual([]);
+  });
+
+  it('a wide archway only keeps a limited clear zone (open-plan L keeps its run)', () => {
+    const p = propose(newProject({ name: 't', room: defaultRoom('open'), catalogId: 'starter', units: 'metric' }), 'l');
+    expect(validate(p).filter((w) => w.rule === 'OK-DOOR')).toEqual([]);
+    expect(p.kitchen.cabinets.filter((c) => c.anchor.elevation < 500).length).toBeGreaterThanOrEqual(6);
+  });
+
+  it('every catalog offers the roles the starter layouts need', () => {
+    for (const id of cats)
+      for (const role of ['base', 'sink', 'corner', 'filler', 'wall', 'tall', 'fridge', 'range', 'dishwasher', 'hood', 'island'] as const)
+        expect(productsFor(id).some((p) => p.role === role), `${id} ${role}`).toBe(true);
+  });
+});
+
+describe('worktop corner joints', () => {
+  it('cover every worktop cabinet whatever order the walls are listed in', async () => {
+    const { pointInPolygon } = await import('../src/lib/model/geometry');
+    for (const shape of ['rectangle', 'l'] as const) for (const kind of ['l', 'u', 'island'] as const) for (const reverse of [false, true]) {
+      let p = propose(mk('starter', shape), kind);
+      if (reverse) p = { ...p, walls: [...p.walls].reverse() };
+      const tops = generateParts(p).filter((g) => g.kind === 'countertop').map((g) => footprint(g.center, g.rotation, g.width, g.depth));
+      for (const c of p.kitchen.cabinets) {
+        if (!product(c.productId)?.hasCountertop || c.anchor.elevation > 10) continue;
+        const corners = cabinetCorners(c);
+        const centre = cabinetCenter(c);
+        const probes = [centre, ...corners.map((q) => ({ x: q.x + (centre.x - q.x) * 0.1, y: q.y + (centre.y - q.y) * 0.1 }))];
+        for (const q of probes) expect(tops.some((t) => pointInPolygon(t, q)), `${shape}/${kind}/rev=${reverse} ${c.sku}`).toBe(true);
+      }
+    }
+  });
+});

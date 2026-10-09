@@ -2,10 +2,12 @@ import type { Units } from './types';
 
 export function fmtLen(mm: number, units: Units, precise = false): string {
   if (units === 'imperial') {
-    const inches = mm / 25.4;
-    const ft = Math.floor(inches / 12);
-    const rest = inches - ft * 12;
-    const r = precise ? Math.round(rest * 8) / 8 : Math.round(rest * 2) / 2;
+    // Round the whole length to the display step first, so 11.9″ carries into the next foot
+    // instead of printing 7′ 12″.
+    const step = precise ? 8 : 2;
+    const totalInches = Math.round((mm / 25.4) * step) / step;
+    const ft = Math.floor(totalInches / 12);
+    const r = Math.round((totalInches - ft * 12) * step) / step;
     if (ft === 0) return `${r}″`;
     return r === 0 ? `${ft}′` : `${ft}′ ${r}″`;
   }

@@ -2,7 +2,7 @@
 // Export mirrors OpenPlanExporter.swift (metres, column-major 4×4, plan y → world Z) with the
 // `openkitchen3d` block; import reads iOS exports (and our own) back into a web Project (mm).
 import { add, alongWall, scale, sub, v, wallAngle, wallDir, wallLength, wallMid, wallPoint, interiorPoint, deg, rad } from '../model/geometry';
-import type { CabinetFamily, Fixture, KitchenCabinetInstance, Opening, Project, Wall } from '../model/types';
+import type { CabinetFamily, Fixture, KitchenCabinetInstance, Opening, Project, Vec2, Wall } from '../model/types';
 import { uid } from '../model/types';
 import { catalogVersion, COUNTERTOP, defaultStyle, product } from '../catalog/catalog';
 
@@ -134,8 +134,52 @@ export const isWebProject = (j: unknown): j is Project => !!j && (j as Json).sch
 
 const iosFamily = (f: string): CabinetFamily => (['base', 'wall', 'tall', 'appliance', 'island', 'filler', 'panel'].includes(f) ? (f as CabinetFamily) : 'base');
 
-/** Reads an iOS / OpenPlan3D prepared RoomPlan JSON (or a web project) into a Project. */
+/**
+ * Reads an iOS / OpenPlan3D prepared RoomPlan JSON (or a web project) into a Project.
+ * Throws an Error with a user-facing message when the file is damaged or not a kitchen.
+ */
 export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Project {
+  let p: Project;
+  try {
+    p = readOpenPlan(j, fallbackName);
+  } catch {
+    throw new Error('This file looks damaged: some walls, doors or cabinets could not be read.');
+  }
+  return checkProject(p);
+}
+
+const finite = (n: unknown) => typeof n === 'number' && Number.isFinite(n);
+const isVec = (q: unknown) => !!q && finite((q as Vec2).x) && finite((q as Vec2).y);
+
+/**
+ * Shape check for projects that arrive from outside (files, share and transfer links), so a damaged
+ * or hand-edited file is rejected up front instead of being saved and breaking the editor later.
+ */
+export function checkProject(p: unknown): Project {
+  const bad = (what: string): never => { throw new Error(`This kitchen can't be opened: ${what}.`); };
+  if (!p || typeof p !== 'object') bad('it is empty');
+  const q = p as Project;
+  if (typeof q.id !== 'string' || !q.id) bad('it has no id');
+  if (!Array.isArray(q.walls)) bad('it has no walls');
+  for (const w of q.walls) {
+    if (!w || typeof w.id !== 'string' || !isVec(w.start) || !isVec(w.end) || !finite(w.height) || !finite(w.thickness)) bad('a wall is incomplete');
+    if (Math.hypot(w.end.x - w.start.x, w.end.y - w.start.y) < 1) bad('a wall has no length');
+  }
+  if (!Array.isArray(q.openings) || q.openings.some((o) => !o || !finite(o.position) || !finite(o.width) || !finite(o.height))) bad('a door or window is incomplete');
+  if (!Array.isArray(q.fixtures)) bad('its fixtures are missing');
+  if (!q.kitchen || !Array.isArray(q.kitchen.cabinets) || !q.kitchen.style || !q.kitchen.countertop) bad('its kitchen settings are missing');
+  for (const c of q.kitchen.cabinets) {
+    if (!c || typeof c.id !== 'string' || !c.anchor || !finite(c.anchor.x) || !finite(c.anchor.y) || !finite(c.anchor.elevation)
+      || !finite(c.rotation) || !finite(c.width) || !finite(c.height) || !finite(c.depth)) bad('a cabinet is incomplete');
+    c.configuration ??= {};
+    c.finishIds ??= {};
+  }
+  if (!finite(q.ceilingHeight)) bad('the ceiling height is missing');
+  if (typeof q.name !== 'string') q.name = 'Imported kitchen';
+  return q;
+}
+
+function readOpenPlan(j: Json, fallbackName: string): Project {
   if (isWebProject(j)) return j;
   const block: Json | undefined = j.openkitchen3d;
   // The embedded web project is only trusted when the web wrote the file; anything iOS re-exports
@@ -219,7 +263,8 @@ export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Projec
     id: String(block?.projectId ?? uid()),
     name: String(block?.name ?? j.sections?.[0]?.displayName ?? fallbackName),
     createdAt: block?.createdAt ?? now,
-    updatedAt: now,
+    // Keep the sender's edit time so the import screen can warn when the copy here is newer.
+    updatedAt: typeof block?.updatedAt === 'string' ? block.updatedAt : now,
     catalogId: extras.catalogId ?? 'starter',
     units: extras.units ?? 'metric',
     captureSource: (block?.captureSource as Project['captureSource']) ?? 'lidar',

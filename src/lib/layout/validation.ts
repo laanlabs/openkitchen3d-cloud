@@ -8,6 +8,9 @@ import type { KitchenCabinetInstance, Project, Vec2 } from '../model/types';
 import { product } from '../catalog/catalog';
 import { blocksOpening, verticalOverlap } from './layout';
 
+/** Deepest clear zone kept in front of a door or opening (mm). Matches iOS Validation.swift. */
+export const DOOR_ZONE_MAX_DEPTH = 1200;
+
 export type Severity = 'error' | 'warning' | 'info';
 
 export interface DesignWarning {
@@ -45,10 +48,12 @@ export function validate(p: Project): DesignWarning[] {
         if (c.wallId === wall.id && blocksOpening(c, wall, p) && c.anchor.elevation + c.height > o.sillHeight + 10)
           out.push(warn('OK-WINDOW', 'warning', `${name(c)} covers a window`, [c.id]));
       } else if (c.anchor.elevation < 500) {
-        // Clear zone in front of the doorway: opening width × opening width.
+        // Clear zone in front of the doorway: opening width wide, as deep as the opening is wide
+        // but at most 1.2 m, so a wide archway does not block the whole room. Same zone as iOS.
         const n = inwardNormal(p, wall);
-        const center = add(wallPoint(wall, o.position), scale(n, o.width / 2)); // same zone as iOS, for fixture parity
-        const zone = footprint(center, deg(Math.atan2(-n.x, n.y)), o.width, o.width);
+        const depth = Math.min(o.width, DOOR_ZONE_MAX_DEPTH);
+        const center = add(wallPoint(wall, o.position), scale(n, depth / 2));
+        const zone = footprint(center, deg(Math.atan2(-n.x, n.y)), o.width, depth);
         if (rectanglesOverlap(zone, cabinetCorners(c)))
           out.push(warn('OK-DOOR', 'error', `${name(c)} blocks a ${o.kind === 'door' ? 'door' : 'doorway'}`, [c.id]));
       }

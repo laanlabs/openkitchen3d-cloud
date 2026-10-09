@@ -247,7 +247,15 @@ const sharedFor = (id: CatalogId) =>
     .filter((p) => p.family === 'island' || (id === 'eu' && (p.family === 'appliance' || p.id === 'wall-hood')) || p.id === 'wall-open')
     .map((p) => ({ ...p, catalog: 'shared' as const }));
 
-export const allProducts: Product[] = [...starter, ...generics];
+/**
+ * The Europe source data has no sink base, corner unit or filler yet, so the starter versions are
+ * lent to it at the EU carcass depth (own ids, so editing them keeps the EU depth).
+ */
+const euBorrowed: Product[] = starter
+  .filter((p) => ['base-sink', 'base-corner', 'base-filler'].includes(p.id))
+  .map((p) => ({ ...p, id: `eu-${p.id}`, catalog: 'eu' as const, variants: p.variants.map((v) => ({ ...v, depth: 560 })) }));
+
+export const allProducts: Product[] = [...starter, ...generics, ...euBorrowed];
 const byId = new Map(allProducts.map((p) => [p.id, p]));
 
 export const catalogs: { id: CatalogId; name: string; blurb: string }[] = [
@@ -259,7 +267,7 @@ export const catalogs: { id: CatalogId; name: string; blurb: string }[] = [
 const catalogCache = new Map<CatalogId, Product[]>();
 export function productsFor(id: CatalogId): Product[] {
   if (!catalogCache.has(id)) {
-    catalogCache.set(id, id === 'starter' ? starter : [...generics.filter((p) => p.catalog === id), ...sharedFor(id)]);
+    catalogCache.set(id, id === 'starter' ? starter : [...generics.filter((p) => p.catalog === id), ...(id === 'eu' ? euBorrowed : []), ...sharedFor(id)]);
   }
   return catalogCache.get(id)!;
 }

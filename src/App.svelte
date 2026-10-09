@@ -7,6 +7,7 @@
   import type { Project } from './lib/model/types';
   import { loadProject } from './lib/io/storage';
   import { decodeShared } from './lib/io/share';
+  import { trackPage } from './lib/firebase';
 
   type Route =
     | { name: 'home' }
@@ -35,6 +36,7 @@
       route = { name: 'home' };
     }
     key++;
+    trackPage(route.name);
     document.title = 'name' in route && 'project' in route ? `${route.project.name} — OpenKitchen3D` : 'OpenKitchen3D — free 3D kitchen planner';
   }
 

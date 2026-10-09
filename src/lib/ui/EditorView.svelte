@@ -59,7 +59,7 @@
     const c = editor.selectedCabinet;
     if (!c) { if (e.key === 'Escape') editor.selection = null; return; }
     if (e.key === 'Delete' || e.key === 'Backspace') { e.preventDefault(); editor.remove(c.id); }
-    else if (e.key.toLowerCase() === 'r') editor.rotate(c.id, e.shiftKey ? -90 : 90);
+    else if (e.key.toLowerCase() === 'r' && !mod) editor.rotate(c.id, e.shiftKey ? -90 : 90);
     else if (e.key.toLowerCase() === 'd' && !mod) editor.duplicate(c.id);
     else if (e.key === 'Escape') editor.selection = null;
   }
@@ -248,6 +248,7 @@
           <button class="btn" onclick={() => download(fileName(p, 'openplan3d', 'json'), JSON.stringify(transferJson(p), null, 2), 'application/json')}>Download file for AirDrop</button>
         </div>
         <p class="muted small">Walls, doors, windows, cabinets, finishes and verification travel to the app. Styles, catalog and worktop settings come back unchanged when you send it back to the web.</p>
+        <p class="muted small">Don't have the app yet? <a href="https://openkitchen3d.com/app" target="_blank" rel="noopener">Get OpenKitchen3D for iPhone, iPad and Mac</a>.</p>
         <div class="mhead"><span></span><button class="btn" onclick={() => (iosLink = '')}>Done</button></div>
       </div>
     </div>
@@ -314,9 +315,9 @@
   .price { font-size: 16px; color: var(--accent-ink); margin-left: 4px; }
   .link { background: none; border: 0; cursor: pointer; color: inherit; font-size: 13px; padding: 0; }
 
-  .modal-bg { position: fixed; inset: 0; background: rgba(15, 23, 30, .45); display: grid; place-items: center; z-index: 50; padding: 16px; }
-  .modal { background: var(--panel); border-radius: 14px; width: min(1000px, 100%); max-height: 90dvh; display: flex; flex-direction: column; padding: 16px; gap: 6px; box-shadow: var(--shadow); }
-  .modal :global(.sched) { flex: 1; min-height: 0; }
+  .modal-bg { position: fixed; inset: 0; background: rgba(15, 23, 30, .45); display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; z-index: 50; padding: 16px; }
+  .modal { background: var(--panel); border-radius: 14px; width: min(1000px, 100%); min-width: 0; max-width: 100%; max-height: 90dvh; display: flex; flex-direction: column; padding: 16px; gap: 6px; box-shadow: var(--shadow); }
+  .modal :global(.sched) { flex: 1; min-height: 0; min-width: 0; overflow: auto; }
   .modal.share { width: min(560px, 100%); gap: 10px; }
   .mhead { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
   .mhead h3 { margin: 0; }

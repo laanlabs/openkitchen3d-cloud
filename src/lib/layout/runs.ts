@@ -242,25 +242,31 @@ export function generateParts(p: Project): GeneratedPart[] {
       price: 0, finish: topFinish.id, sourceIds: [c.id], axis: v(Math.cos(r), Math.sin(r))
     });
   }
-  // Butt joints: where two slabs overlap at a corner, trim the later one to the earlier one's edge.
+  // Butt joints: where two slabs overlap at a corner, trim one back to the other's edge. Trim the
+  // slab that loses less: cutting the strip that only overhangs into the corner, never the slab
+  // that covers the corner cabinet (which slab comes first depends only on wall order).
+  type Slab = (typeof slabs)[number];
+  const trimFor = (t: Slab, other: Slab) => {
+    const ax = norm(t.axis);
+    const tc = dot(t.center, ax);
+    let t0 = tc - t.width / 2, t1 = tc + t.width / 2;
+    const po = footprint(other.center, other.rotation, other.width, other.depth).map((q) => dot(q, ax));
+    const o0 = Math.min(...po), o1 = Math.max(...po);
+    if (o1 - t0 < t1 - o0) t0 = Math.max(t0, o1); else t1 = Math.min(t1, o0);
+    const width = t1 - t0;
+    return { slab: t, center: add(t.center, scale(ax, (t0 + t1) / 2 - tc)), width, cut: t.width - width };
+  };
   for (let i = 0; i < slabs.length; i++) {
     for (let j = 0; j < i; j++) {
       const a = slabs[j], b = slabs[i];
       if (Math.abs(a.elevation - b.elevation) > 5) continue;
-      const ca = footprint(a.center, a.rotation, a.width, a.depth);
-      const cb = footprint(b.center, b.rotation, b.width, b.depth);
-      if (!overlaps(ca, cb)) continue;
-      const ax = norm(b.axis);
-      if (Math.abs(dot(ax, norm(a.axis))) > 0.5) continue; // parallel slabs: leave alone
-      const bc = dot(b.center, ax);
-      let b0 = bc - b.width / 2, b1 = bc + b.width / 2;
-      const pa = ca.map((q) => dot(q, ax));
-      const a0 = Math.min(...pa), a1 = Math.max(...pa);
-      if (a1 - b0 < b1 - a0) b0 = Math.max(b0, a1); else b1 = Math.min(b1, a0);
-      if (b1 - b0 < 20) continue;
-      const shift = (b0 + b1) / 2 - bc;
-      b.center = add(b.center, scale(ax, shift));
-      b.width = b1 - b0;
+      if (!overlaps(footprint(a.center, a.rotation, a.width, a.depth), footprint(b.center, b.rotation, b.width, b.depth))) continue;
+      if (Math.abs(dot(norm(b.axis), norm(a.axis))) > 0.5) continue; // parallel slabs: leave alone
+      const options = [trimFor(b, a), trimFor(a, b)].filter((o) => o.width >= 20).sort((x, y) => x.cut - y.cut);
+      const best = options[0];
+      if (!best) continue;
+      best.slab.center = best.center;
+      best.slab.width = best.width;
     }
   }
   for (const s of slabs) {

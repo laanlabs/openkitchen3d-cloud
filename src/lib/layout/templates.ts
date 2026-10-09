@@ -1,5 +1,5 @@
 // Room templates, the new-project factory and one-click starter layouts (one-wall, galley, L, U, island).
-import { alongWall, cabinetCenter, inwardNormal, interiorPoint, polygonArea, wallLength, v } from '../model/geometry';
+import { alongWall, cabinetCenter, inwardNormal, interiorPoint, polygonArea, wallDir, wallLength, v } from '../model/geometry';
 import type { CatalogId, KitchenCabinetInstance, Opening, Project, Units, Vec2, Wall } from '../model/types';
 import { uid } from '../model/types';
 import { catalogVersion, COUNTERTOP, defaultStyle, productForRole, productsFor, type Product, type Role, type Variant } from '../catalog/catalog';
@@ -290,15 +290,27 @@ function addIsland(p: Project, primary: Wall): Project {
   const n = inwardNormal(p, primary);
   const rotation = (Math.atan2(-n.x, n.y) * 180) / Math.PI + 180;
   const center = interiorPoint(p);
-  for (const vr of [...prod.variants].sort((a, b) => b.width - a.width)) {
-    for (const shift of [0, 200, -200, 400]) {
-      const c = { ...makeCabinet(prod, p, vr), rotation, anchor: { x: center.x + n.x * shift, y: center.y + n.y * shift, elevation: 0 } };
-      const trial = withCabinet(p, c);
-      const bad = validate(trial).some((w) => w.cabinetIds.includes(c.id) && (w.severity === 'error' || w.rule === 'OK-AISLE'));
-      if (!bad) return trial;
+  const d = wallDir(primary);
+  // The room centre is usually too close to the side run, so also try positions slid along the
+  // primary wall (away from either side run) and towards or away from it, nearest first.
+  const offsets: { s: number; t: number }[] = [];
+  for (const s of [0, 300, -300, 600, -600, 900, -900]) for (const t of [0, 200, -200, 400]) offsets.push({ s, t });
+  offsets.sort((a, b) => Math.abs(a.s) + Math.abs(a.t) - (Math.abs(b.s) + Math.abs(b.t)));
+  const variants = [...prod.variants].sort((a, b) => b.width - a.width);
+  const tryPlace = (acceptAisleWarning: boolean, vrs: typeof variants) => {
+    for (const vr of vrs) {
+      for (const { s, t } of offsets) {
+        const c = { ...makeCabinet(prod, p, vr), rotation, anchor: { x: center.x + d.x * s + n.x * t, y: center.y + d.y * s + n.y * t, elevation: 0 } };
+        const trial = withCabinet(p, c);
+        const bad = validate(trial).some((w) => w.cabinetIds.includes(c.id) && (w.severity === 'error' || (!acceptAisleWarning && w.rule === 'OK-AISLE')));
+        if (!bad) return trial;
+      }
     }
-  }
-  return p;
+    return null;
+  };
+  // Prefer a clean fit; in a tight room fall back to the smallest island with an aisle warning,
+  // so choosing "L + island" never silently drops the island.
+  return tryPlace(false, variants) ?? tryPlace(true, variants.slice(-1)) ?? p;
 }
 
 function dropErrors(p: Project): Project {
