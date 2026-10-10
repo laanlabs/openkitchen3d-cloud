@@ -6,9 +6,10 @@ import {
   add, alongWall, cabinetCenter, cabinetCorners, dot, footprint, inwardNormal, scale, sub, v,
   wallDir, wallLength, rad, norm, perp
 } from '../model/geometry';
-import type { KitchenCabinetInstance, Project, Vec2, Wall } from '../model/types';
+import type { KitchenCabinetInstance, Project, Units, Vec2, Wall } from '../model/types';
 import { countertops, handlePrice, handles, product, swatch, TOE_KICK, variantFor } from '../catalog/catalog';
 import { blocksOpening } from './layout';
+import { fmtArea, fmtLen } from '../model/units';
 
 export type Level = 'base' | 'wall';
 
@@ -340,7 +341,7 @@ export function schedule(p: Project, parts = generateParts(p)): ScheduleLine[] {
   for (const g of parts) {
     if (g.kind === 'countertop') {
       lines.set(g.id, {
-        key: g.id, qty: 1, sku: g.sku, description: `${g.name} (${g.area!.toFixed(2)} m²)`, finish: g.finish ?? '',
+        key: g.id, qty: 1, sku: g.sku, description: `${g.name} (${fmtArea(g.area!, p.units)})`, finish: g.finish ?? '',
         width: Math.round(g.width), depth: Math.round(g.depth), height: g.height, unitPrice: g.price, total: g.price, auto: true, ids: [g.id]
       });
     } else {
@@ -348,13 +349,13 @@ export function schedule(p: Project, parts = generateParts(p)): ScheduleLine[] {
       push({ key, sku: g.sku, description: g.name, finish: p.kitchen.style.front, width: Math.round(g.width), depth: g.depth, height: g.height, unitPrice: g.price, auto: true }, g.id);
     }
   }
-  // Toe kick: linear metres under floor-standing cabinets (not appliances).
+  // Toe kick: run length under floor-standing cabinets (not appliances).
   const kick = p.kitchen.cabinets.filter((c) => c.anchor.elevation < 50 && (c.family === 'base' || c.family === 'tall' || c.family === 'island' || c.family === 'filler'));
   const kickLen = kick.reduce((s, c) => s + c.width + (c.family === 'island' ? c.width + 2 * c.depth : 0), 0);
   if (kickLen > 0) {
     const price = Math.round((kickLen / 1000) * 14);
     lines.set('toekick', {
-      key: 'toekick', qty: 1, sku: `TK-${TOE_KICK}`, description: `Toe kick (${(kickLen / 1000).toFixed(2)} m)`, finish: p.kitchen.style.carcass,
+      key: 'toekick', qty: 1, sku: `TK-${TOE_KICK}`, description: `Toe kick (${fmtLen(kickLen, p.units)})`, finish: p.kitchen.style.carcass,
       width: Math.round(kickLen), depth: 16, height: TOE_KICK, unitPrice: price, total: price, auto: true, ids: kick.map((c) => c.id)
     });
   }
@@ -364,16 +365,16 @@ export function schedule(p: Project, parts = generateParts(p)): ScheduleLine[] {
 export const scheduleTotal = (lines: ScheduleLine[]) => lines.reduce((s, l) => s + l.total, 0);
 
 /** Human-readable list of generated parts that change between two designs (parts-list integrity). */
-export function diffGenerated(before: GeneratedPart[], after: GeneratedPart[]): string[] {
+export function diffGenerated(before: GeneratedPart[], after: GeneratedPart[], units: Units = 'metric'): string[] {
   const out: string[] = [];
   const b = new Map(before.map((g) => [g.id, g]));
   const a = new Map(after.map((g) => [g.id, g]));
   const label = (g: GeneratedPart) =>
-    g.kind === 'countertop' ? `countertop ${(g.width / 1000).toFixed(2)} m` : g.name.toLowerCase();
+    g.kind === 'countertop' ? `countertop ${fmtLen(g.width, units)}` : g.name.toLowerCase();
   for (const [id, g] of b) {
     const n = a.get(id);
     if (!n) out.push(`removed ${label(g)}`);
-    else if (Math.abs(n.width - g.width) > 1) out.push(`${label(g)} → ${(n.width / 1000).toFixed(2)} m`);
+    else if (Math.abs(n.width - g.width) > 1) out.push(`${label(g)} → ${fmtLen(n.width, units)}`);
   }
   for (const [id, g] of a) if (!b.has(id)) out.push(`added ${label(g)}`);
   return out;

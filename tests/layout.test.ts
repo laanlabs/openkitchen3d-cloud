@@ -106,6 +106,14 @@ describe('run solver', () => {
     expect(lines.filter((l) => !l.auto).reduce((s, l) => s + l.qty, 0)).toBe(p.kitchen.cabinets.length);
   });
 
+  it('describes worktops and toe kick in the project units', () => {
+    const p = propose({ ...mk('na'), units: 'imperial' }, 'u');
+    const text = schedule(p).filter((l) => l.auto).map((l) => l.description).join('\n');
+    expect(text).toMatch(/sq ft\)/);
+    expect(text).toMatch(/Toe kick \(\d+′/);
+    expect(text).not.toMatch(/m²| m\)/);
+  });
+
   it('adds a filler for a small gap at the end of a run', () => {
     let p = mk();
     const wall = p.walls[0];

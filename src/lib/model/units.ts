@@ -14,6 +14,11 @@ export function fmtLen(mm: number, units: Units, precise = false): string {
   return precise || mm < 1000 ? `${Math.round(mm)} mm` : `${(mm / 1000).toFixed(2)} m`;
 }
 
+/** Area given in m², shown as m² or square feet. */
+export function fmtArea(m2: number, units: Units): string {
+  return units === 'imperial' ? `${(m2 / 0.09290304).toFixed(1)} sq ft` : `${m2.toFixed(2)} m²`;
+}
+
 /** Short label for catalog widths, e.g. 600 / 24″ */
 export const fmtShort = (mm: number, units: Units) =>
   units === 'imperial' ? `${Math.round((mm / 25.4) * 2) / 2}″` : `${Math.round(mm)}`;

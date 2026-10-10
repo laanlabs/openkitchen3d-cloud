@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { fmtLen, parseLen } from '../src/lib/model/units';
+import { fmtArea, fmtLen, parseLen } from '../src/lib/model/units';
+
+describe('fmtArea', () => {
+  it('shows square feet for imperial projects and m² for metric', () => {
+    expect(fmtArea(1, 'imperial')).toBe('10.8 sq ft');
+    expect(fmtArea(2.5, 'metric')).toBe('2.50 m²');
+  });
+});
 
 describe('fmtLen', () => {
   it('carries rounded imperial inches into feet instead of printing 12″', () => {

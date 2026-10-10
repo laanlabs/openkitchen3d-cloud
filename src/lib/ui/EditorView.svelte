@@ -12,7 +12,7 @@
   import ChecksPanel from './ChecksPanel.svelte';
   import Schedule from './Schedule.svelte';
   import Logo from './Logo.svelte';
-  import { money } from '../model/units';
+  import { fmtArea, money } from '../model/units';
   import { download, dataUrlToBlob } from '../io/download';
   import { fileName, toOpenPlan } from '../io/openplan';
   import { scheduleCsv } from '../io/csv';
@@ -208,7 +208,7 @@
 
   <footer class="totals">
     <span><strong>{p.kitchen.cabinets.length}</strong> units</span>
-    <span class="hide-sm">Worktop <strong>{topArea.toFixed(2)} m²</strong></span>
+    <span class="hide-sm">Worktop <strong>{fmtArea(topArea, p.units)}</strong></span>
     <span class="hide-sm">{p.walls.length} walls · {p.openings.length} openings</span>
     <span class="spacer"></span>
     <button class="link" onclick={() => (showSchedule = true)}>Estimated total <strong class="price">{money(editor.total, p.kitchen.currency)}</strong></button>

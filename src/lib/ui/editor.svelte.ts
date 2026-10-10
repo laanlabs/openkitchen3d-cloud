@@ -61,7 +61,7 @@ export class Editor {
     const after = change(before);
     if (after === before) return;
     this.commit(before, { ...after, updatedAt: new Date().toISOString() });
-    if (notice) this.notify(notice, diffGenerated(generateParts(before), this.parts));
+    if (notice) this.notify(notice, diffGenerated(generateParts(before), this.parts, after.units));
   }
 
   private commit(before: Project, after: Project) {
