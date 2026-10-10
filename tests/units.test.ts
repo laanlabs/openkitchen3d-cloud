@@ -11,11 +11,11 @@ describe('fmtArea', () => {
 describe('fmtLen', () => {
   it('carries rounded imperial inches into feet instead of printing 12″', () => {
     expect(fmtLen((7 * 12 + 11.9) * 25.4, 'imperial')).toBe('8′');
-    expect(fmtLen((7 * 12 + 11.9) * 25.4, 'imperial', true)).toBe('7′ 11.875″');
+    expect(fmtLen((7 * 12 + 11.9) * 25.4, 'imperial', true)).toBe('7′ 11 7/8″');
     expect(fmtLen(11.8 * 25.4, 'imperial')).toBe('1′');
     expect(fmtLen(36 * 25.4, 'imperial')).toBe('3′');
-    expect(fmtLen(30.5 * 25.4, 'imperial')).toBe('2′ 6.5″');
-    expect(fmtLen(5.5 * 25.4, 'imperial')).toBe('5.5″');
+    expect(fmtLen(30.5 * 25.4, 'imperial')).toBe('2′ 6 1/2″');
+    expect(fmtLen(5.5 * 25.4, 'imperial')).toBe('5 1/2″');
   });
 
   it('formats metric lengths', () => {
@@ -34,5 +34,27 @@ describe('parseLen', () => {
     expect(parseLen('36', 'imperial')).toBeCloseTo(36 * 25.4);
     expect(parseLen('600', 'metric')).toBe(600);
     expect(parseLen('abc', 'metric')).toBeNull();
+  });
+
+  it('parses tape-measure fractions', () => {
+    const inch = (n: number) => n * 25.4;
+    expect(parseLen('36 1/2', 'imperial')).toBeCloseTo(inch(36.5));
+    expect(parseLen('36-1/2"', 'imperial')).toBeCloseTo(inch(36.5));
+    expect(parseLen('36½', 'imperial')).toBeCloseTo(inch(36.5));
+    expect(parseLen('3/4', 'imperial')).toBeCloseTo(inch(0.75));
+    expect(parseLen("3' 6 1/2\"", 'imperial')).toBeCloseTo(inch(42.5));
+    expect(parseLen("3'-6 5/8", 'imperial')).toBeCloseTo(inch(42.625));
+    expect(parseLen('3 ft 6 1/2 in', 'imperial')).toBeCloseTo(inch(42.5));
+    expect(parseLen('3’ 6”', 'imperial')).toBeCloseTo(inch(42)); // iOS smart quotes
+    expect(parseLen('24 1/2in', 'metric')).toBeCloseTo(inch(24.5));
+    expect(parseLen('36 1/0', 'imperial')).toBeNull();
+    expect(parseLen('1/2/3', 'imperial')).toBeNull();
+  });
+
+  it('reads back every imperial length it displays', () => {
+    for (let eighths = 1; eighths < 8 * 12 * 12; eighths += 7) {
+      const mm = (eighths / 8) * 25.4;
+      expect(parseLen(fmtLen(mm, 'imperial', true), 'imperial')).toBeCloseTo(mm, 6);
+    }
   });
 });

@@ -17,7 +17,8 @@
     | { name: 'loading' }
     | { name: 'missing'; message: string };
 
-  let route = $state<Route>({ name: 'loading' });
+  // Raw: routes are only ever replaced, and a deep proxy around the project breaks structuredClone.
+  let route = $state.raw<Route>({ name: 'loading' });
   let key = $state(0);
 
   async function resolve() {

@@ -113,7 +113,7 @@
   }
 
   async function makeCopy() {
-    const copy: Project = { ...structuredClone(p), id: uid(), name: `${p.name} (copy)`, updatedAt: new Date().toISOString() };
+    const copy: Project = { ...$state.snapshot(p) as Project, id: uid(), name: `${p.name} (copy)`, updatedAt: new Date().toISOString() };
     await saveProject(copy);
     location.hash = `#/p/${copy.id}`;
   }

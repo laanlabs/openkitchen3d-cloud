@@ -19,12 +19,12 @@
 </script>
 
 <input
-  class="len" class:bad type="text" inputmode="decimal" aria-label={label} {disabled}
+  class="len" class:bad type="text" inputmode={units === 'imperial' ? 'text' : 'decimal'} aria-label={label} {disabled}
   bind:value={text}
   onfocus={(e) => { editing = true; (e.currentTarget as HTMLInputElement).select(); }}
   onblur={commit}
   onkeydown={(e) => { if (e.key === 'Enter') (e.currentTarget as HTMLInputElement).blur(); if (e.key === 'Escape') { editing = false; text = fmtLen(value, units, true); (e.currentTarget as HTMLInputElement).blur(); } }}
-  title="Type mm, cm, m, in or ft (e.g. 2.4m, 36in, 3'6&quot;)"
+  title={units === 'imperial' ? `Type inches or feet, fractions allowed (e.g. 36 1/2, 3'6 1/2", 24in)` : 'Type mm, cm, m or in (e.g. 2.4m, 600, 24in)'}
 />
 
 <style>
