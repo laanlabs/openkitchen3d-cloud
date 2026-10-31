@@ -4,6 +4,7 @@
   import { cabinetPrice } from '../layout/runs';
   import { wallLength } from '../model/geometry';
   import { fmtLen, fmtShort, money } from '../model/units';
+  import { currencies } from '../model/currency';
   import LengthInput from './LengthInput.svelte';
   import Swatches from './Swatches.svelte';
   import ProductThumb from './ProductThumb.svelte';
@@ -165,6 +166,14 @@
         {#each catalogs as cat (cat.id)}<option value={cat.id}>{cat.name}</option>{/each}
       </select>
       <p class="muted small">{catalogs.find((x) => x.id === p.catalogId)?.blurb}. Existing units keep their size.</p>
+    </section>
+    <section>
+      <span class="label">Currency</span>
+      <select value={p.kitchen.currency} disabled={editor.readonly} onchange={(e) => editor.setCurrency((e.currentTarget as HTMLSelectElement).value)}>
+        {#each currencies as c (c.id)}<option value={c.id}>{c.name}</option>{/each}
+        {#if !currencies.some((c) => c.id === p.kitchen.currency)}<option value={p.kitchen.currency}>{p.kitchen.currency}</option>{/if}
+      </select>
+      <p class="muted small">Prices are rough list-price estimates; this changes the symbol, not the amounts.</p>
     </section>
     <section>
       <span class="label">Ceiling height</span>

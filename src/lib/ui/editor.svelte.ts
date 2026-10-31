@@ -331,7 +331,17 @@ export class Editor {
   }
 
   update(patch: Partial<Project>) {
-    this.edit((p) => ({ ...p, ...patch, ...(patch.catalogId ? { kitchen: { ...p.kitchen, catalogVersion: catalogVersion(patch.catalogId) } } : {}) }));
+    this.edit((p) => {
+      if (!patch.catalogId) return { ...p, ...patch };
+      // Moving between the EU and North American catalogs brings their currency along.
+      const currency = patch.catalogId === 'eu' && p.kitchen.currency === 'USD' ? 'EUR'
+        : patch.catalogId === 'na' && p.kitchen.currency === 'EUR' ? 'USD' : p.kitchen.currency;
+      return { ...p, ...patch, kitchen: { ...p.kitchen, catalogVersion: catalogVersion(patch.catalogId), currency } };
+    });
+  }
+
+  setCurrency(currency: string) {
+    this.edit((p) => (p.kitchen.currency === currency ? p : { ...p, kitchen: { ...p.kitchen, currency } }));
   }
 
   setCountertop(patch: Partial<Project['kitchen']['countertop']>) {

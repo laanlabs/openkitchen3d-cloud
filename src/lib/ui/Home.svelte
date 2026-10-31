@@ -153,7 +153,7 @@
               <div class="info">
                 <a href="#/p/{s.id}" class="name">{s.name}</a>
                 <span class="muted small">{s.cabinets} units · edited {fmtDate(s.updatedAt)}</span>
-                {#if previews[s.id]}<span class="small price">{money(scheduleTotal(schedule(previews[s.id])))}</span>{/if}
+                {#if previews[s.id]}<span class="small price">{money(scheduleTotal(schedule(previews[s.id])), previews[s.id].kitchen.currency)}</span>{/if}
               </div>
               <div class="actions">
                 {#if confirmDelete === s.id}
@@ -227,7 +227,7 @@
             <button class="layout" class:on={layout === k.id} onclick={() => (layout = k.id)}>
               <MiniPlan project={prop} height={150} />
               <span class="lname"><LayoutIcon kind={k.id} size={22} /> {k.name}</span>
-              <span class="muted small">{k.id === 'empty' ? k.blurb : `${prop.kitchen.cabinets.length} units · ${money(scheduleTotal(schedule(prop)))}`}{errs ? ' · needs fixes' : ''}</span>
+              <span class="muted small">{k.id === 'empty' ? k.blurb : `${prop.kitchen.cabinets.length} units · ${money(scheduleTotal(schedule(prop)), prop.kitchen.currency)}`}{errs ? ' · needs fixes' : ''}</span>
             </button>
           {/each}
         </div>

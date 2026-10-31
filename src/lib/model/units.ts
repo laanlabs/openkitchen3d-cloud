@@ -71,5 +71,11 @@ function single(s: string, units: Units): number | null {
   }
 }
 
-export const money = (n: number, currency = 'USD') =>
-  new Intl.NumberFormat(undefined, { style: 'currency', currency, maximumFractionDigits: 0 }).format(n);
+export function money(n: number, currency = 'USD'): string {
+  try {
+    return new Intl.NumberFormat(undefined, { style: 'currency', currency, maximumFractionDigits: 0 }).format(n);
+  } catch {
+    // Unknown code from an imported file: show the number with the code rather than fail to render.
+    return `${new Intl.NumberFormat(undefined, { maximumFractionDigits: 0 }).format(n)} ${currency}`;
+  }
+}

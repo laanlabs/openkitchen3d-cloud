@@ -1,6 +1,7 @@
 // Local-first project library in IndexedDB. Nothing leaves the browser unless the user exports or shares.
 import { createStore, del, entries, get, set } from 'idb-keyval';
 import type { Project } from '../model/types';
+import { withCatalogCurrency } from '../model/currency';
 
 const store = createStore('openkitchen3d', 'projects');
 
@@ -13,6 +14,6 @@ export async function listProjects(): Promise<ProjectSummary[]> {
     .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
 }
 
-export const loadProject = (id: string) => get<Project>(id, store);
+export const loadProject = async (id: string) => withCatalogCurrency(await get<Project>(id, store));
 export const saveProject = (p: Project) => set(p.id, JSON.parse(JSON.stringify(p)), store);
 export const deleteProject = (id: string) => del(id, store);

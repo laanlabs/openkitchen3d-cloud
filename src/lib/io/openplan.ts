@@ -4,6 +4,7 @@
 import { add, alongWall, scale, sub, v, wallAngle, wallDir, wallLength, wallMid, wallPoint, interiorPoint, deg, rad } from '../model/geometry';
 import type { CabinetFamily, Fixture, KitchenCabinetInstance, Opening, Project, Vec2, Wall } from '../model/types';
 import { uid } from '../model/types';
+import { defaultCurrency, withCatalogCurrency } from '../model/currency';
 import { catalogVersion, COUNTERTOP, defaultStyle, product } from '../catalog/catalog';
 
 export const KITCHEN_SCHEMA = 'openkitchen3d/ios-project@0.1';
@@ -145,7 +146,7 @@ export function fromOpenPlan(j: Json, fallbackName = 'Imported kitchen'): Projec
   } catch {
     throw new Error('This file looks damaged: some walls, doors or cabinets could not be read.');
   }
-  return checkProject(p);
+  return withCatalogCurrency(checkProject(p));
 }
 
 const finite = (n: unknown) => typeof n === 'number' && Number.isFinite(n);
@@ -278,7 +279,7 @@ function readOpenPlan(j: Json, fallbackName: string): Project {
       cabinets,
       style,
       countertop: { ...COUNTERTOP, ...(extras.countertop ?? {}) },
-      currency: extras.currency ?? 'USD'
+      currency: extras.currency ?? defaultCurrency(extras.catalogId ?? 'starter')
     }
   };
 }

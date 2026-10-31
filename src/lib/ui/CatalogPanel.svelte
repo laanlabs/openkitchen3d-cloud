@@ -47,7 +47,7 @@
           <span class="meta">
             <span class="name">{x.name}</span>
             <span class="muted small">{v.sku} · {fmtShort(v.width, p.units)} × {fmtShort(v.depth, p.units)} × {fmtShort(v.height, p.units)}</span>
-            <span class="price">{money(x.price(v))}</span>
+            <span class="price">{money(x.price(v), p.kitchen.currency)}</span>
           </span>
         </button>
         {#if x.variants.length > 1}

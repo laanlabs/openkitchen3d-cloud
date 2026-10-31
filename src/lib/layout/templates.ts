@@ -1,4 +1,5 @@
 // Room templates, the new-project factory and one-click starter layouts (one-wall, galley, L, U, island).
+import { defaultCurrency } from '../model/currency';
 import { alongWall, cabinetCenter, inwardNormal, interiorPoint, polygonArea, wallDir, wallLength, v } from '../model/geometry';
 import type { CatalogId, KitchenCabinetInstance, Opening, Project, Units, Vec2, Wall } from '../model/types';
 import { uid } from '../model/types';
@@ -110,7 +111,7 @@ export function newProject(opts: { name: string; room: RoomParams; catalogId: Ca
       cabinets: [],
       style: { ...defaultStyle },
       countertop: { ...COUNTERTOP },
-      currency: 'USD'
+      currency: defaultCurrency(opts.catalogId)
     }
   };
 }
